@@ -16,6 +16,11 @@ body.alto-contraste {
     --gris-claro: #222222;
 }
 
+body.alto-contraste .btn-alt {
+    border-color: #ffff00;
+    color: #ffff00;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -41,12 +46,46 @@ body.alto-contraste h3 {
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background-color 0.4s ease, padding 0.4s ease, border-bottom-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar.scrolled {
     background-color: var(--blanco);
+    padding: 12px 5%;
     border-bottom: 2px solid var(--oro-viejo);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Sombra más sutil para fondo blanco */
+}
+
+/* Cambiar textos a color oscuro cuando se hace scroll */
+.navbar.scrolled .nav-links a {
+    color: var(--texto);
+}
+
+.navbar.scrolled .nav-links a:hover, 
+.navbar.scrolled .nav-links a.active {
+    color: var(--oro-viejo);
+}
+
+.navbar.scrolled .btn-alt {
+    border-color: var(--azul-lago);
+    color: var(--azul-lago);
+}
+
+.navbar.scrolled .btn-alt:hover {
+    border-color: var(--oro-viejo);
+    color: var(--oro-viejo);
+    background-color: rgba(197, 168, 128, 0.1);
 }
 
 .logo {
@@ -55,7 +94,7 @@ body.alto-contraste h3 {
 }
 
 .logo-img {
-    height: 70px;
+    height: 50px; /* Ajusta la altura que prefieras para tu logo */
     width: auto;
     object-fit: contain;
 }
@@ -68,7 +107,7 @@ body.alto-contraste h3 {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--texto);
+    color: #ffffff; /* Texto blanco para contrastar con fondo oscuro/transparente */
     font-weight: 500;
     transition: color 0.2s ease;
 }
@@ -96,22 +135,29 @@ body.alto-contraste h3 {
 .btn-alt {
     padding: 8px 16px;
     background: transparent;
-    border: 2px solid var(--azul-lago);
-    color: var(--azul-lago);
+    border: 2px solid #ffffff;
+    color: #ffffff;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-alt:hover {
+    border-color: var(--oro-viejo);
+    color: var(--oro-viejo);
+    background-color: rgba(197, 168, 128, 0.1);
 }
 
 .hero {
-    height: 70vh;
-    background: linear-gradient(rgba(15, 44, 89, 0.5), rgba(15, 44, 89, 0.55)), url('images/estructura-acervo-historico.jpg') no-repeat center center/cover;
+    height: 90vh;
+    background: linear-gradient(rgba(15, 44, 89, 0.45), rgba(15, 44, 89, 0.55)), url('images/estructura-acervo-historico.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: var(--blanco);
-    padding: 0 20px;
+    padding: 80px 20px 20px 20px; /* Margen superior para compensar el navbar fijo */
 }
 
 .hero-content {
