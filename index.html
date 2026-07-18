@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo Histórico del Estado Zulia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="images/acervo-historico-edited-logo.jpg" alt="Acervo Histórico del Estado Zulia" class="logo-img">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#">Épocas</a></li>
+                <li><a href="#">Galería</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <button id="btn-contraste" class="btn-alt">Alto Contraste</button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Guardianes de la Memoria Zuliana</h1>
+                <p>Descubre los documentos, mapas y fotografías que narran la historia, identidad y cultura del Estado Zulia.</p>
+                <a href="#epocas" class="btn-primary">Explorar Archivo</a>
+            </div>
+        </section>
+
+        <section id="epocas" class="epocas-section">
+            <h2>Épocas Históricas</h2>
+            <div class="grid-epocas">
+                <div class="card">
+                    <div class="card-img card-prehispánica"></div>
+                    <h3>Época Prehispánica</h3>
+                    <p>Los orígenes de las comunidades indígenas de la cuenca del Lago.</p>
+                </div>
+                <div class="card">
+                    <div class="card-img card-colonial"></div>
+                    <h3>Periodo Colonial</h3>
+                    <p>La Maracaibo de casas reales, el puerto y las fortificaciones.</p>
+                </div>
+                <div class="card">
+                    <div class="card-img card-republicana"></div>
+                    <h3>Era Republicana</h3>
+                    <p>Gestas de independencia y la consolidación de la identidad zuliana.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="multimedia-section">
+            <h2>Archivo Multimedia</h2>
+            <div class="multimedia-container">
+                <video controls width="100%">
+                    <source src="video-historico.mp4" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Acervo Histórico del Estado Zulia. Proyecto Académico.</p>
+        <p>Maracaibo, Venezuela.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
