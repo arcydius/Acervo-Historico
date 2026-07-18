@@ -60,14 +60,18 @@ body.alto-contraste h3 {
     transition: background-color 0.4s ease, padding 0.4s ease, border-bottom-color 0.4s ease, box-shadow 0.4s ease;
 }
 
+.navbar::after {
+    content: "";
+    flex: 1;
+}
+
 .navbar.scrolled {
     background-color: var(--blanco);
     padding: 12px 5%;
     border-bottom: 2px solid var(--oro-viejo);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Sombra más sutil para fondo blanco */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Cambiar textos a color oscuro cuando se hace scroll */
 .navbar.scrolled .nav-links a {
     color: var(--texto);
 }
@@ -91,10 +95,17 @@ body.alto-contraste h3 {
 .logo {
     display: flex;
     align-items: center;
+    flex: 1; /* Ocupa el espacio de la izquierda */
+}
+
+.navbar nav {
+    flex: 1; /* Ocupa el espacio del centro */
+    display: flex;
+    justify-content: center; /* Centra los links en su zona */
 }
 
 .logo-img {
-    height: 50px; /* Ajusta la altura que prefieras para tu logo */
+    height: 50px;
     width: auto;
     object-fit: contain;
 }
@@ -107,7 +118,7 @@ body.alto-contraste h3 {
 
 .nav-links a {
     text-decoration: none;
-    color: #ffffff; /* Texto blanco para contrastar con fondo oscuro/transparente */
+    color: #ffffff;
     font-weight: 500;
     transition: color 0.2s ease;
 }
@@ -157,7 +168,7 @@ body.alto-contraste h3 {
     align-items: center;
     text-align: center;
     color: var(--blanco);
-    padding: 80px 20px 20px 20px; /* Margen superior para compensar el navbar fijo */
+    padding: 80px 20px 20px 20px;
 }
 
 .hero-content {
@@ -252,6 +263,12 @@ body.alto-contraste h3 {
     .navbar {
         flex-direction: column;
         gap: 15px;
+    }
+    .navbar::after {
+        display: none;
+    }
+    .logo, .navbar nav {
+        flex: none;
     }
     .hero-content h1 {
         font-size: 30px;

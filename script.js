@@ -1,4 +1,3 @@
-// Lógica para la barra de navegación pegajosa (Sticky/Fixed) con fondo negro al hacer scroll
 const navbar = document.querySelector('.navbar');
 
 if (navbar) {
