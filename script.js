@@ -4,6 +4,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   
+  // Variables globales de desplazamiento
+  let isNavClickScrolling = false;
+  let navClickTimeout = null;
+
   // 1. MANEJO DE NAVEGACIÓN MÓVIL Y MENÚ HAMBURGUESA
   const navToggle = document.getElementById('navToggle');
   const navMenu = document.getElementById('navMenu');
@@ -15,10 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
       navToggle.setAttribute('aria-expanded', !isExpanded);
       navMenu.classList.toggle('active');
     });
-
-    // Bloqueo de ScrollSpy durante el desplazamiento por clic para evitar saltos
-    let isNavClickScrolling = false;
-    let navClickTimeout = null;
 
     // Activar enlace al hacer clic y cerrar menú
     navLinks.forEach(link => {
