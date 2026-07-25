@@ -1286,17 +1286,30 @@ footer { background: var(--black); color: rgba(255,255,255,.68); padding: 3rem 0
     padding-left: 0; padding-top: .875rem;
   }
   .hero-scroll { display: none; }
-  /* Timeline: single-column, all cards right of node */
+  /* Timeline Mobile Adaptation: Ensure ALL 5 timeline cards display in single-column layout */
   .timeline::before { left: 25px; transform: none; }
-  .tl-row { grid-template-columns: 50px 1fr; }
-  .tl-left  { display: none; }
-  .tl-right { padding-left: 1.125rem; }
-  .tl-mid   { justify-content: flex-start; }
-  /* Flip rows — preserve left-to-right flow on mobile */
-  .tl-row.flip { grid-template-columns: 50px 1fr; }
-  .tl-row.flip .tl-left  { display: none; }
-  .tl-row.flip .tl-mid   { grid-column: 1; grid-row: 1; justify-content: flex-start; }
-  .tl-row.flip .tl-right { grid-column: 2; grid-row: 1; padding-left: 1.125rem; }
+  .tl-row, .tl-row.flip {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-areas: "node content";
+    gap: 1.125rem;
+    margin-bottom: 2.25rem;
+  }
+  .tl-empty {
+    display: none !important;
+  }
+  .tl-mid {
+    grid-area: node;
+    justify-content: flex-start;
+    align-self: flex-start;
+  }
+  .tl-left, .tl-right {
+    grid-area: content;
+    display: block !important;
+    padding: 0 !important;
+    text-align: left !important;
+    width: 100%;
+  }
   .foot-top { grid-template-columns: 1fr; gap: 2rem; }
   .coll-card { max-width: 100%; }
 }
