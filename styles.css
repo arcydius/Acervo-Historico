@@ -1285,29 +1285,34 @@ footer { background: var(--black); color: rgba(255,255,255,.68); padding: 3rem 0
     border-top: 1px solid rgba(255,255,255,.07);
     padding-left: 0; padding-top: .875rem;
   }
-  /* Timeline Mobile Adaptation: Bulletproof Order for Node on Left, Card on Right */
+  /* Timeline Mobile Redesign: All cards positioned cleanly on the right side of the vertical timeline */
+  .timeline {
+    padding-left: 2.75rem !important;
+    position: relative !important;
+  }
   .timeline::before {
     left: 20px !important;
     transform: none !important;
   }
   .tl-row,
   .tl-row.flip {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: flex-start !important;
-    gap: 1rem !important;
-    margin-bottom: 2.25rem !important;
+    display: block !important;
+    position: relative !important;
+    margin-bottom: 2rem !important;
     width: 100% !important;
   }
   .tl-empty {
     display: none !important;
   }
   .tl-mid {
-    order: 1 !important;
-    flex: 0 0 40px !important;
+    position: absolute !important;
+    left: -2.75rem !important;
+    top: 0 !important;
     width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
     justify-content: center !important;
-    align-self: flex-start !important;
     z-index: 2 !important;
   }
   .tl-node {
@@ -1320,13 +1325,11 @@ footer { background: var(--black); color: rgba(255,255,255,.68); padding: 3rem 0
   }
   .tl-left,
   .tl-right {
-    order: 2 !important;
-    flex: 1 1 auto !important;
-    width: calc(100% - 56px) !important;
+    display: block !important;
+    width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
     text-align: left !important;
-    display: block !important;
   }
   .tl-card {
     width: 100% !important;
