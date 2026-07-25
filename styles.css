@@ -1285,30 +1285,52 @@ footer { background: var(--black); color: rgba(255,255,255,.68); padding: 3rem 0
     border-top: 1px solid rgba(255,255,255,.07);
     padding-left: 0; padding-top: .875rem;
   }
-  .hero-scroll { display: none; }
-  /* Timeline Mobile Adaptation: Ensure ALL 5 timeline cards display in single-column layout */
-  .timeline::before { left: 25px; transform: none; }
-  .tl-row, .tl-row.flip {
-    display: grid;
-    grid-template-columns: 50px 1fr;
-    grid-template-areas: "node content";
-    gap: 1.125rem;
-    margin-bottom: 2.25rem;
+  /* Timeline Mobile Adaptation: Bulletproof Order for Node on Left, Card on Right */
+  .timeline::before {
+    left: 20px !important;
+    transform: none !important;
+  }
+  .tl-row,
+  .tl-row.flip {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+    margin-bottom: 2.25rem !important;
+    width: 100% !important;
   }
   .tl-empty {
     display: none !important;
   }
   .tl-mid {
-    grid-area: node;
-    justify-content: flex-start;
-    align-self: flex-start;
+    order: 1 !important;
+    flex: 0 0 40px !important;
+    width: 40px !important;
+    justify-content: center !important;
+    align-self: flex-start !important;
+    z-index: 2 !important;
   }
-  .tl-left, .tl-right {
-    grid-area: content;
-    display: block !important;
+  .tl-node {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .tl-node svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  .tl-left,
+  .tl-right {
+    order: 2 !important;
+    flex: 1 1 auto !important;
+    width: calc(100% - 56px) !important;
     padding: 0 !important;
+    margin: 0 !important;
     text-align: left !important;
-    width: 100%;
+    display: block !important;
+  }
+  .tl-card {
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
   .foot-top { grid-template-columns: 1fr; gap: 2rem; }
   .coll-card { max-width: 100%; }
