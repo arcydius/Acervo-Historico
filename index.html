@@ -1,594 +1,670 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="dark">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Acervo Histórico del Estado Zulia - Resguardo, preservación y consulta de la memoria histórica, documental y cultural de la región zuliana.">
-  <title>Acervo Histórico del Estado Zulia | Memoria y Patrimonio Cultural</title>
-  
-  <!-- Fuentes Elegantes de Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Iconos de FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Estilos del Sitio -->
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acervo Histórico del Estado Zulia | Guardianes de la Memoria Regional</title>
+  <meta name="description" content="El Acervo Histórico del Estado Zulia preserva y difunde el patrimonio documental de nuestra región. Mapas, manuscritos y registros históricos del Estado Zulia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Enlace de accesibilidad para saltar al contenido -->
-  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+<!-- ═══════════════════ NAVBAR ═══════════════════ -->
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="#inicio" class="nav-logo" aria-label="Acervo Histórico del Estado Zulia – Inicio">
+      <div class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          <line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="13" y2="11"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">Acervo Histórico</span>
+        <span class="logo-sub">Estado Zulia</span>
+      </div>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#inicio" id="nl-inicio">Inicio</a></li>
+      <li><a href="#sobre-nosotros" id="nl-sobre">Sobre Nosotros</a></li>
+      <li><a href="#linea-del-tiempo" id="nl-tiempo">Línea del Tiempo</a></li>
+      <li><a href="#colecciones" id="nl-col">Colecciones</a></li>
+      <li><a href="#ubicacion" id="nl-ubic">Ubicación</a></li>
+    </ul>
+    <button id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-  <!-- BANNER SUPERIOR DE ACCESIBILIDAD / INFO -->
-  <div class="top-bar">
-    <div class="container top-bar__content">
-      <div class="top-bar__info">
-        <span><i class="fa-solid fa-location-dot"></i> Maracaibo, Estado Zulia - Venezuela</span>
-        <span class="divider">|</span>
-        <span><i class="fa-solid fa-clock"></i> Lunes a Viernes: 8:00 AM - 4:00 PM</span>
-      </div>
-      <div class="top-bar__actions">
-        <button id="themeToggleBtn" class="top-bar__btn" aria-label="Cambiar modo de color (Oscuro/Claro)">
-          <i class="fa-solid fa-moon" id="themeIcon"></i> <span id="themeText">Modo Oscuro</span>
-        </button>
-        <button id="fontScaleBtn" class="top-bar__btn" aria-label="Aumentar tamaño de texto">
-          <i class="fa-solid fa-text-height"></i> Accesibilidad
-        </button>
-      </div>
+<div id="mobile-menu" role="menu" aria-label="Menú móvil">
+  <a href="#inicio" role="menuitem">Inicio</a>
+  <a href="#sobre-nosotros" role="menuitem">Sobre Nosotros</a>
+  <a href="#linea-del-tiempo" role="menuitem">Línea del Tiempo</a>
+  <a href="#colecciones" role="menuitem">Colecciones</a>
+  <a href="#ubicacion" role="menuitem">Ubicación</a>
+</div>
+
+<main>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section id="inicio" aria-label="Bienvenida al Acervo Histórico del Estado Zulia">
+  <div class="hero-bg" role="img" aria-label="Fondo: archivo histórico con manuscritos y documentos iluminados"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="hero-badge-dot" aria-hidden="true"></span>
+      Maracaibo · Estado Zulia · Venezuela
+    </div>
+
+    <h1 class="hero-h1">
+      Guardianes de la <em>memoria viva</em> de nuestra región
+    </h1>
+
+    <p class="hero-sub">
+      Aquí encontrarás documentos valiosos, mapas, manuscritos, y registros
+      que cuentan la historia de nuestro Estado Zulia.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#colecciones" class="btn-primary" id="cta-colecciones">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        Explorar Colecciones
+      </a>
+      <a href="#sobre-nosotros" class="btn-ghost" id="cta-sobre">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        Conocer más
+      </a>
     </div>
   </div>
 
-  <!-- ENCABEZADO PRINCIPAL Y NAVEGACIÓN -->
-  <header class="header" id="header">
-    <div class="container nav-container">
-      
-      <!-- Marca con Logo Oficial -->
-      <a href="#inicio" class="nav-brand" aria-label="Inicio Acervo Histórico del Estado Zulia">
-        <div class="nav-brand__logo-box">
-          <img src="images/acervo-historico-logo.jpg" alt="Logo Oficial Acervo Histórico del Zulia" class="nav-brand__img">
+  <div class="hero-stats" aria-label="Datos institucionales">
+    <div class="hero-stats-inner">
+      <div class="stat">
+        <div class="stat-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         </div>
-        <div class="nav-brand__text">
-          <span class="nav-brand__title">Acervo Histórico</span>
-          <span class="nav-brand__subtitle">Estado Zulia • Patrimonio Nacional</span>
+        <div><div class="stat-n">+50.000</div><div class="stat-l">Documentos catalogados</div></div>
+      </div>
+      <div class="stat">
+        <div class="stat-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         </div>
-      </a>
+        <div><div class="stat-n">+8.000</div><div class="stat-l">Piezas fotográficas</div></div>
+      </div>
+      <div class="stat">
+        <div class="stat-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div><div class="stat-n">+52 años</div><div class="stat-l">Preservando la historia regional</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Menú de Navegación -->
-      <nav class="nav-menu-wrapper" id="navMenu" aria-label="Navegación principal">
-        <ul class="nav-menu">
-          <li class="nav-menu__item">
-            <a href="#inicio" class="nav-menu__link nav-menu__link--active">Inicio</a>
-          </li>
-          <li class="nav-menu__item">
-            <a href="#sobre-nosotros" class="nav-menu__link">Sobre Nosotros</a>
-          </li>
-          <li class="nav-menu__item">
-            <a href="#colecciones" class="nav-menu__link">Fondos & Colecciones</a>
-          </li>
-          <li class="nav-menu__item">
-            <a href="#linea-tiempo" class="nav-menu__link">Hitos Históricos</a>
-          </li>
-          <li class="nav-menu__item">
-            <a href="#servicios" class="nav-menu__link">Servicios</a>
-          </li>
-          <li class="nav-menu__item">
-            <a href="#contacto" class="nav-menu__link nav-menu__link--cta">Contacto</a>
-          </li>
-        </ul>
-      </nav>
+<!-- ═══════════════════ SOBRE NOSOTROS ═══════════════════ -->
+<section id="sobre-nosotros" aria-labelledby="about-h2">
+  <div class="container">
+    <div class="about-grid">
 
-      <!-- Botón Menú Móvil -->
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navMenu">
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-      </button>
+      <!-- Visual Side (Left) -->
+      <div class="about-visual reveal">
+        <div class="about-accent-bg" aria-hidden="true"></div>
+        <div class="about-visual-main" aria-hidden="true">
+          <!-- Bookshelf / Archive illustration SVG -->
+          <svg class="shelf-art" viewBox="0 0 380 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="55" width="340" height="10" rx="3" fill="rgba(212,160,23,.22)"/>
+            <rect x="20" y="175" width="340" height="10" rx="3" fill="rgba(212,160,23,.22)"/>
+            <rect x="20" y="295" width="340" height="10" rx="3" fill="rgba(212,160,23,.22)"/>
+            <rect x="20" y="415" width="340" height="10" rx="3" fill="rgba(212,160,23,.22)"/>
+            <rect x="14" y="55" width="8" height="370" rx="2" fill="rgba(212,160,23,.18)"/>
+            <rect x="358" y="55" width="8" height="370" rx="2" fill="rgba(212,160,23,.18)"/>
+            <rect x="32" y="15" width="20" height="40" rx="2" fill="rgba(212,160,23,.55)"/>
+            <rect x="55" y="22" width="16" height="33" rx="2" fill="rgba(255,255,255,.18)"/>
+            <rect x="74" y="10" width="24" height="45" rx="2" fill="rgba(212,160,23,.38)"/>
+            <rect x="101" y="20" width="18" height="35" rx="2" fill="rgba(255,255,255,.14)"/>
+            <rect x="122" y="14" width="22" height="41" rx="2" fill="rgba(212,160,23,.48)"/>
+            <rect x="147" y="24" width="14" height="31" rx="2" fill="rgba(255,255,255,.16)"/>
+            <rect x="164" y="8" width="26" height="47" rx="2" fill="rgba(212,160,23,.32)"/>
+            <rect x="193" y="18" width="20" height="37" rx="2" fill="rgba(255,255,255,.2)"/>
+            <rect x="216" y="12" width="24" height="43" rx="2" fill="rgba(212,160,23,.5)"/>
+            <rect x="243" y="22" width="16" height="33" rx="2" fill="rgba(255,255,255,.15)"/>
+            <rect x="262" y="10" width="28" height="45" rx="2" fill="rgba(212,160,23,.42)"/>
+            <rect x="293" y="18" width="20" height="37" rx="2" fill="rgba(255,255,255,.18)"/>
+            <rect x="316" y="14" width="24" height="41" rx="2" fill="rgba(212,160,23,.36)"/>
+            <rect x="32" y="135" width="22" height="40" rx="2" fill="rgba(255,255,255,.18)"/>
+            <rect x="57" y="126" width="18" height="49" rx="2" fill="rgba(212,160,23,.52)"/>
+            <rect x="78" y="138" width="14" height="37" rx="2" fill="rgba(255,255,255,.14)"/>
+            <rect x="95" y="130" width="26" height="45" rx="2" fill="rgba(212,160,23,.36)"/>
+            <rect x="124" y="138" width="20" height="37" rx="2" fill="rgba(255,255,255,.2)"/>
+            <rect x="147" y="124" width="24" height="51" rx="2" fill="rgba(212,160,23,.58)"/>
+            <rect x="174" y="133" width="16" height="42" rx="2" fill="rgba(255,255,255,.16)"/>
+            <rect x="193" y="128" width="22" height="47" rx="2" fill="rgba(212,160,23,.42)"/>
+            <rect x="218" y="136" width="18" height="39" rx="2" fill="rgba(255,255,255,.18)"/>
+            <rect x="239" y="127" width="28" height="48" rx="2" fill="rgba(212,160,23,.32)"/>
+            <rect x="270" y="134" width="20" height="41" rx="2" fill="rgba(255,255,255,.2)"/>
+            <rect x="293" y="125" width="24" height="50" rx="2" fill="rgba(212,160,23,.5)"/>
+            <rect x="320" y="132" width="18" height="43" rx="2" fill="rgba(255,255,255,.15)"/>
+            <rect x="32" y="254" width="24" height="41" rx="2" fill="rgba(212,160,23,.48)"/>
+            <rect x="59" y="262" width="16" height="33" rx="2" fill="rgba(255,255,255,.16)"/>
+            <rect x="78" y="248" width="22" height="47" rx="2" fill="rgba(212,160,23,.34)"/>
+            <rect x="103" y="258" width="26" height="37" rx="2" fill="rgba(255,255,255,.18)"/>
+            <rect x="132" y="251" width="18" height="44" rx="2" fill="rgba(212,160,23,.55)"/>
+            <rect x="153" y="260" width="14" height="35" rx="2" fill="rgba(255,255,255,.14)"/>
+            <rect x="170" y="246" width="28" height="49" rx="2" fill="rgba(212,160,23,.38)"/>
+            <rect x="201" y="255" width="22" height="40" rx="2" fill="rgba(255,255,255,.2)"/>
+            <rect x="226" y="248" width="20" height="47" rx="2" fill="rgba(212,160,23,.5)"/>
+            <rect x="249" y="257" width="16" height="38" rx="2" fill="rgba(255,255,255,.16)"/>
+            <rect x="268" y="250" width="26" height="45" rx="2" fill="rgba(212,160,23,.4)"/>
+            <rect x="297" y="258" width="18" height="37" rx="2" fill="rgba(255,255,255,.18)"/>
+            <rect x="318" y="247" width="24" height="48" rx="2" fill="rgba(212,160,23,.3)"/>
+            <ellipse cx="190" cy="232" rx="90" ry="65" fill="rgba(212,160,23,.045)"/>
+            <rect x="155" y="195" width="70" height="90" rx="5" fill="rgba(255,255,255,.07)" stroke="rgba(212,160,23,.38)" stroke-width="1.5"/>
+            <line x1="168" y1="218" x2="212" y2="218" stroke="rgba(212,160,23,.45)" stroke-width="1.4" stroke-linecap="round"/>
+            <line x1="168" y1="232" x2="208" y2="232" stroke="rgba(212,160,23,.32)" stroke-width="1.4" stroke-linecap="round"/>
+            <line x1="168" y1="246" x2="212" y2="246" stroke="rgba(212,160,23,.38)" stroke-width="1.4" stroke-linecap="round"/>
+            <line x1="168" y1="260" x2="200" y2="260" stroke="rgba(212,160,23,.28)" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Text Side (Right) -->
+      <div class="about-text">
+        <h2 class="about-title reveal d1" id="about-h2">Nuestra Misión Institucional</h2>
+        <div class="title-line reveal d1"></div>
+
+        <p class="about-lead reveal d2">
+          El <strong>Acervo Histórico del Estado Zulia</strong> tiene la noble misión de rescatar, organizar, conservar y difundir el invaluable patrimonio documental de la región zuliana.
+        </p>
+        <p class="about-subtext reveal d2">
+          A través de la preservación de archivos históricos, protegemos las raíces de nuestra identidad, permitiendo a investigadores, estudiantes y ciudadanos conectar con el pasado que forjó nuestro presente.
+        </p>
+
+        <div class="feature-list reveal d3">
+          <div class="feature-card">
+            <div class="feature-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+            </div>
+            <span class="feature-txt">Conservación Preventiva</span>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <span class="feature-txt">Acceso a la Investigación</span>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="21" x2="21" y2="21"/>
+                <line x1="6" y1="18" x2="6" y2="11"/>
+                <line x1="10" y1="18" x2="10" y2="11"/>
+                <line x1="14" y1="18" x2="14" y2="11"/>
+                <line x1="18" y1="18" x2="18" y2="11"/>
+                <polygon points="12 2 20 7 4 7 12 2"/>
+              </svg>
+            </div>
+            <span class="feature-txt">Custodia Patrimonial</span>
+          </div>
+        </div>
+      </div>
 
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- CONTENIDO PRINCIPAL -->
-  <main id="main-content">
-    
-    <!-- SECCIÓN HERO (ESTILO MNTN - IMAGEN DE FONDO FUSIONADA) -->
-    <section id="inicio" class="hero">
-      <div class="container hero__container">
-        <div class="hero__content">
-          <div class="hero__badge">
-            <span class="hero__badge-line"></span>
-            <span>MEMORIA, CULTURA E IDENTIDAD ZULIANA</span>
+<!-- ═══════════════════ LÍNEA DEL TIEMPO ═══════════════════ -->
+<section id="linea-del-tiempo" aria-labelledby="tl-h2">
+  <div class="container">
+    <div class="tl-header">
+      <span class="section-label reveal">Historia Institucional</span>
+      <h2 class="section-title reveal d1" id="tl-h2">Nuestra Línea del Tiempo</h2>
+      <p class="section-sub reveal d2">Un recorrido cronológico por los hitos más importantes en la creación, crecimiento y consolidación del Acervo Histórico del Estado Zulia.</p>
+    </div>
+
+    <div class="timeline" role="list" aria-label="Cronología institucional">
+
+      <!-- Item 1: 1940 -->
+      <div class="tl-row reveal" role="listitem">
+        <div class="tl-left">
+          <div class="tl-card">
+            <div class="tl-year">24 de julio de 1940</div>
+            <div class="tl-title">Antecedente Institucional</div>
+            <div class="tl-desc">El presidente del estado Zulia, Dr. Manuel Maldonado, decreta la creación del Centro Histórico del Zulia. Este ente sentó las bases para el estudio de la historiografía local y la necesidad de concentrar el patrimonio documental zuliano.</div>
           </div>
-          
-          <h1 class="hero__title">
-            Guardia y Custodia del <span class="hero__title-accent">Patrimonio Histórico</span> del Zulia
-          </h1>
-          
-          <p class="hero__description">
-            Resguardamos, conservamos y difundimos la memoria documental, mapas antiguos y manuscritos coloniales que fundan la identidad, historia e institucionalidad del Estado Zulia.
-          </p>
+        </div>
+        <div class="tl-mid">
+          <div class="tl-node"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        </div>
+        <div class="tl-right tl-empty"></div>
+      </div>
 
-          <div class="hero__actions">
-            <a href="#colecciones" class="btn btn--primary">
-              <i class="fa-solid fa-book-bookmark"></i> Explorar Colecciones
+      <!-- Item 2: 1974 -->
+      <div class="tl-row flip reveal d1" role="listitem">
+        <div class="tl-left tl-empty"></div>
+        <div class="tl-mid">
+          <div class="tl-node"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        </div>
+        <div class="tl-right">
+          <div class="tl-card">
+            <div class="tl-year">5 de junio de 1974</div>
+            <div class="tl-title">Creación Oficial del Acervo Histórico</div>
+            <div class="tl-desc">El gobernador del Zulia, Carmelo Contreras Barboza, promulga el Decreto N.º&#8239;71, mediante el cual nace formalmente el Acervo Histórico del Estado Zulia. Su propósito inicial fue localizar, proteger, catalogar y conservar los documentos, monumentos, ruinas y piezas de valor histórico de la entidad.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3: 1975 -->
+      <div class="tl-row reveal d2" role="listitem">
+        <div class="tl-left">
+          <div class="tl-card">
+            <div class="tl-year">1 de enero de 1975</div>
+            <div class="tl-title">Inicio de Funciones y Restauración Patrimonial</div>
+            <div class="tl-desc">Toma posesión su primer director, el historiador Antonio Gómez Espinoza, nombrado por el gobernador encargado Rafael Urdaneta Díaz. Durante este período se impulsa la remodelación y rescate de la Casa de la Capitulación (sede colonial donde se firmó la capitulación española tras la Batalla Naval del Lago).</div>
+          </div>
+        </div>
+        <div class="tl-mid">
+          <div class="tl-node"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        </div>
+        <div class="tl-right tl-empty"></div>
+      </div>
+
+      <!-- Item 4: 1970 - 1980 -->
+      <div class="tl-row flip reveal d1" role="listitem">
+        <div class="tl-left tl-empty"></div>
+        <div class="tl-mid">
+          <div class="tl-node"><svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
+        </div>
+        <div class="tl-right">
+          <div class="tl-card">
+            <div class="tl-year">Décadas de 1970 – 1980</div>
+            <div class="tl-title">Etapa de Adscripción e Integración Patrimonial</div>
+            <div class="tl-desc">Se formaliza la adscripción al Acervo Histórico de importantes espacios patrimoniales y documentales de Maracaibo, entre los cuales destacan la Casa de la Capitulación, el Museo Histórico General Rafael Urdaneta y el Archivo Histórico del Zulia.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5: 2015 - 2017 -->
+      <div class="tl-row reveal d2" role="listitem">
+        <div class="tl-left">
+          <div class="tl-card">
+            <div class="tl-year">2015 – 2017</div>
+            <div class="tl-title">Transferencia Documental Histórica</div>
+            <div class="tl-desc">Se ejecuta un importante proceso de rescate documental mediante el traslado de más de 700 tomos manuscritos e impresos desde el Registro Principal del Estado Zulia hacia el fondo documental del Acervo. Esto incorporó expedientes coloniales y republicanos que abarcan desde finales del siglo XVIII hasta el siglo XX.</div>
+          </div>
+        </div>
+        <div class="tl-mid">
+          <div class="tl-node"><svg viewBox="0 0 24 24"><path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"/><polyline points="14 2 14 8 20 8"/><path d="M2 15h10M5 12l-3 3 3 3"/></svg></div>
+        </div>
+        <div class="tl-right tl-empty"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ COLECCIONES ═══════════════════ -->
+<section id="colecciones" aria-labelledby="coll-h2">
+  <div class="container">
+    <div class="coll-header">
+      <span class="section-label reveal">Nuestro Patrimonio</span>
+      <h2 class="section-title reveal d1" id="coll-h2">Colecciones Documentales</h2>
+      <p class="section-sub reveal d2">Explora los fondos que conforman nuestro repositorio histórico: una ventana al pasado que preserva la identidad y la memoria del pueblo zuliano.</p>
+    </div>
+    <div class="coll-grid">
+
+      <!-- Card 1 -->
+      <article class="coll-card reveal" aria-label="Colección Mapoteca Histórica">
+        <div class="coll-thumb">
+          <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#2a1f0e 0%,#4a3520 100%);">
+            <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
+              <!-- Parchment map base -->
+              <rect width="260" height="195" fill="url(#mg1)"/>
+              <defs><linearGradient id="mg1" x1="0" y1="0" x2="260" y2="195" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#2a1f0e"/><stop offset="100%" stop-color="#3c2a14"/></linearGradient></defs>
+              <!-- Map body -->
+              <rect x="20" y="15" width="220" height="165" rx="4" fill="rgba(220,185,110,.1)" stroke="rgba(212,160,23,.3)" stroke-width="1.2"/>
+              <!-- Coastline shapes -->
+              <path d="M40 80 Q70 60 100 75 Q130 90 160 70 Q185 55 210 72 L220 80 L210 140 Q185 155 160 140 Q130 150 100 135 Q70 140 40 125 Z" fill="rgba(212,160,23,.08)" stroke="rgba(212,160,23,.28)" stroke-width="1.2"/>
+              <!-- Lake shape -->
+              <ellipse cx="130" cy="108" rx="35" ry="24" fill="rgba(27,58,107,.22)" stroke="rgba(100,160,220,.35)" stroke-width="1"/>
+              <!-- Grid lines -->
+              <line x1="20" y1="60" x2="240" y2="60" stroke="rgba(212,160,23,.12)" stroke-width=".8"/>
+              <line x1="20" y1="100" x2="240" y2="100" stroke="rgba(212,160,23,.12)" stroke-width=".8"/>
+              <line x1="20" y1="140" x2="240" y2="140" stroke="rgba(212,160,23,.12)" stroke-width=".8"/>
+              <line x1="80" y1="15" x2="80" y2="180" stroke="rgba(212,160,23,.12)" stroke-width=".8"/>
+              <line x1="140" y1="15" x2="140" y2="180" stroke="rgba(212,160,23,.12)" stroke-width=".8"/>
+              <line x1="200" y1="15" x2="200" y2="180" stroke="rgba(212,160,23,.12)" stroke-width=".8"/>
+              <!-- Compass rose -->
+              <circle cx="210" cy="160" r="14" fill="rgba(212,160,23,.08)" stroke="rgba(212,160,23,.3)" stroke-width="1"/>
+              <path d="M210 148 L212 157 L210 160 L208 157 Z" fill="rgba(212,160,23,.7)"/>
+              <path d="M210 172 L212 163 L210 160 L208 163 Z" fill="rgba(255,255,255,.25)"/>
+              <path d="M198 160 L207 158 L210 160 L207 162 Z" fill="rgba(255,255,255,.25)"/>
+              <path d="M222 160 L213 158 L210 160 L213 162 Z" fill="rgba(255,255,255,.25)"/>
+              <!-- Rolled edges -->
+              <path d="M20 15 Q30 10 40 15" stroke="rgba(212,160,23,.3)" stroke-width="1.5" fill="none"/>
+              <path d="M220 15 Q230 10 240 15" stroke="rgba(212,160,23,.3)" stroke-width="1.5" fill="none"/>
+              <!-- Gold glow -->
+              <ellipse cx="130" cy="97" rx="70" ry="50" fill="rgba(212,160,23,.03)"/>
+            </svg>
+          </div>
+          <div class="coll-overlay" aria-hidden="true"></div>
+          <span class="coll-badge">Mapoteca</span>
+        </div>
+        <div class="coll-body">
+          <div class="coll-ico"><svg viewBox="0 0 24 24"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div>
+          <h3>Mapoteca Histórica</h3>
+          <p>Colección de cartografía histórica: mapas coloniales, planos urbanos de Maracaibo y representaciones del Lago de Maracaibo desde el siglo XVI hasta el XX. Materiales únicos de gran valor geográfico e histórico.</p>
+          <a href="#ubicacion" class="coll-link" aria-label="Consultar Mapoteca Histórica">
+            Consultar colección
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="coll-card reveal d1" aria-label="Colección Fototeca Histórica">
+        <div class="coll-thumb">
+          <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#1a2640 0%,#2c3e6a 100%);">
+            <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
+              <defs><linearGradient id="fg1" x1="0" y1="0" x2="260" y2="195" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1a2640"/><stop offset="100%" stop-color="#263450"/></linearGradient></defs>
+              <rect width="260" height="195" fill="url(#fg1)"/>
+              <!-- Photo frames -->
+              <rect x="18" y="18" width="82" height="68" rx="3" fill="rgba(255,255,255,.09)" stroke="rgba(212,160,23,.38)" stroke-width="1.3"/>
+              <ellipse cx="59" cy="46" rx="22" ry="20" fill="rgba(212,160,23,.12)"/>
+              <line x1="24" y1="74" x2="94" y2="74" stroke="rgba(212,160,23,.15)" stroke-width=".8"/>
+              <rect x="26" y="78" width="66" height="4" rx="1" fill="rgba(255,255,255,.06)"/>
+
+              <rect x="160" y="12" width="86" height="72" rx="3" fill="rgba(255,255,255,.09)" stroke="rgba(212,160,23,.32)" stroke-width="1.3"/>
+              <rect x="168" y="20" width="70" height="56" rx="2" fill="rgba(212,160,23,.07)"/>
+              <ellipse cx="203" cy="45" rx="25" ry="20" fill="rgba(212,160,23,.1)"/>
+
+              <rect x="14" y="108" width="96" height="74" rx="3" fill="rgba(255,255,255,.09)" stroke="rgba(212,160,23,.35)" stroke-width="1.3"/>
+              <rect x="22" y="116" width="80" height="58" rx="2" fill="rgba(212,160,23,.07)"/>
+              <rect x="30" y="124" width="65" height="42" rx="1" fill="rgba(212,160,23,.06)"/>
+
+              <rect x="152" y="100" width="90" height="80" rx="3" fill="rgba(255,255,255,.09)" stroke="rgba(212,160,23,.4)" stroke-width="1.3"/>
+              <ellipse cx="197" cy="138" rx="28" ry="24" fill="rgba(212,160,23,.1)"/>
+
+              <!-- Magnifier -->
+              <circle cx="120" cy="98" r="26" fill="rgba(212,160,23,.07)" stroke="rgba(212,160,23,.35)" stroke-width="1.8"/>
+              <line x1="139" y1="117" x2="154" y2="133" stroke="rgba(212,160,23,.55)" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="116" cy="92" r="5" fill="rgba(212,160,23,.4)"/>
+
+              <!-- Gold sparks -->
+              <circle cx="135" cy="55" r="2.5" fill="rgba(212,160,23,.45)"/>
+              <circle cx="142" cy="70" r="1.8" fill="rgba(212,160,23,.3)"/>
+              <circle cx="128" cy="78" r="1.5" fill="rgba(212,160,23,.35)"/>
+            </svg>
+          </div>
+          <div class="coll-overlay" aria-hidden="true"></div>
+          <span class="coll-badge">Fototeca</span>
+        </div>
+        <div class="coll-body">
+          <div class="coll-ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+          <h3>Fototeca Histórica</h3>
+          <p>Más de ocho mil fotografías documentan la vida cotidiana, eventos históricos, retratos de personalidades y paisajes del Estado Zulia durante los siglos XIX y XX, incluyendo la época de bonanza petrolera.</p>
+          <a href="#ubicacion" class="coll-link" aria-label="Consultar Fototeca Histórica">
+            Consultar colección
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="coll-card reveal d2" aria-label="Documentos Coloniales">
+        <div class="coll-thumb">
+          <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#2c1808 0%,#4e2e12 100%);">
+            <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
+              <defs><linearGradient id="dg1" x1="0" y1="0" x2="260" y2="195" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#2c1808"/><stop offset="100%" stop-color="#402010"/></linearGradient></defs>
+              <rect width="260" height="195" fill="url(#dg1)"/>
+              <!-- Parchment documents stacked -->
+              <rect x="55" y="12" width="145" height="170" rx="5" fill="rgba(230,190,120,.09)" stroke="rgba(212,160,23,.22)" stroke-width="1" transform="rotate(-4 130 97)"/>
+              <rect x="55" y="12" width="145" height="170" rx="5" fill="rgba(230,190,120,.11)" stroke="rgba(212,160,23,.28)" stroke-width="1" transform="rotate(-1.5 130 97)"/>
+              <rect x="55" y="14" width="145" height="168" rx="5" fill="rgba(230,190,120,.13)" stroke="rgba(212,160,23,.36)" stroke-width="1.3"/>
+              <!-- Title block -->
+              <rect x="68" y="28" width="124" height="12" rx="2" fill="rgba(212,160,23,.22)"/>
+              <!-- Text lines -->
+              <line x1="68" y1="52" x2="192" y2="52" stroke="rgba(212,160,23,.18)" stroke-width="1"/>
+              <line x1="68" y1="65" x2="185" y2="65" stroke="rgba(212,160,23,.15)" stroke-width="1"/>
+              <line x1="68" y1="78" x2="190" y2="78" stroke="rgba(212,160,23,.18)" stroke-width="1"/>
+              <line x1="68" y1="91" x2="180" y2="91" stroke="rgba(212,160,23,.14)" stroke-width="1"/>
+              <line x1="68" y1="104" x2="188" y2="104" stroke="rgba(212,160,23,.17)" stroke-width="1"/>
+              <line x1="68" y1="117" x2="175" y2="117" stroke="rgba(212,160,23,.14)" stroke-width="1"/>
+              <!-- Wax seal -->
+              <circle cx="130" cy="152" r="20" fill="rgba(160,25,25,.2)" stroke="rgba(212,160,23,.42)" stroke-width="1.5"/>
+              <circle cx="130" cy="152" r="13" fill="rgba(160,25,25,.15)" stroke="rgba(212,160,23,.28)" stroke-width="1"/>
+              <path d="M126 147 L130 142 L134 147 L132 155 L128 155 Z" fill="rgba(212,160,23,.45)"/>
+              <!-- Quill feather -->
+              <path d="M215 10 Q225 30 205 170" stroke="rgba(255,255,255,.28)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+              <path d="M215 10 Q228 22 218 50" stroke="rgba(255,255,255,.2)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <!-- Warm glow -->
+              <ellipse cx="130" cy="97" rx="65" ry="50" fill="rgba(212,160,23,.04)"/>
+            </svg>
+          </div>
+          <div class="coll-overlay" aria-hidden="true"></div>
+          <span class="coll-badge">Colonial</span>
+        </div>
+        <div class="coll-body">
+          <div class="coll-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+          <h3>Documentos Coloniales</h3>
+          <p>Manuscritos, actas, cédulas reales y correspondencia oficial del período colonial venezolano (siglos XVII–XIX). Piezas únicas que narran los procesos administrativos, religiosos y sociales de la época fundacional de Maracaibo.</p>
+          <a href="#ubicacion" class="coll-link" aria-label="Consultar Documentos Coloniales">
+            Consultar colección
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="coll-card reveal d3" aria-label="Hemeroteca Regional">
+        <div class="coll-thumb">
+          <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#1c2830 0%,#2e3d48 100%);">
+            <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
+              <defs><linearGradient id="hg1" x1="0" y1="0" x2="260" y2="195" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1c2830"/><stop offset="100%" stop-color="#2a3840"/></linearGradient></defs>
+              <rect width="260" height="195" fill="url(#hg1)"/>
+              <!-- Stacked newspapers -->
+              <rect x="16" y="48" width="228" height="142" rx="3" fill="rgba(230,210,155,.07)" stroke="rgba(212,160,23,.18)" stroke-width="1" transform="rotate(-4 130 119)"/>
+              <rect x="16" y="44" width="228" height="142" rx="3" fill="rgba(230,210,155,.09)" stroke="rgba(212,160,23,.22)" stroke-width="1" transform="rotate(-1.5 130 115)"/>
+              <rect x="16" y="40" width="228" height="148" rx="3" fill="rgba(230,210,155,.11)" stroke="rgba(212,160,23,.3)" stroke-width="1.3"/>
+              <!-- Masthead -->
+              <rect x="24" y="50" width="212" height="16" rx="2" fill="rgba(212,160,23,.28)"/>
+              <!-- Column dividers -->
+              <line x1="24" y1="74" x2="236" y2="74" stroke="rgba(212,160,23,.3)" stroke-width="1.2"/>
+              <line x1="110" y1="80" x2="110" y2="180" stroke="rgba(212,160,23,.12)" stroke-width=".8"/>
+              <line x1="166" y1="80" x2="166" y2="180" stroke="rgba(212,160,23,.12)" stroke-width=".8"/>
+              <!-- Col 1 text lines -->
+              <line x1="30" y1="86" x2="102" y2="86" stroke="rgba(212,160,23,.2)" stroke-width=".9"/>
+              <line x1="30" y1="96" x2="102" y2="96" stroke="rgba(212,160,23,.17)" stroke-width=".9"/>
+              <line x1="30" y1="106" x2="96" y2="106" stroke="rgba(212,160,23,.18)" stroke-width=".9"/>
+              <line x1="30" y1="116" x2="102" y2="116" stroke="rgba(212,160,23,.16)" stroke-width=".9"/>
+              <rect x="30" y="124" width="68" height="48" rx="2" fill="rgba(212,160,23,.07)"/>
+              <!-- Col 2 text lines -->
+              <line x1="117" y1="86" x2="158" y2="86" stroke="rgba(212,160,23,.17)" stroke-width=".9"/>
+              <line x1="117" y1="98" x2="158" y2="98" stroke="rgba(212,160,23,.15)" stroke-width=".9"/>
+              <line x1="117" y1="110" x2="155" y2="110" stroke="rgba(212,160,23,.17)" stroke-width=".9"/>
+              <line x1="117" y1="122" x2="158" y2="122" stroke="rgba(212,160,23,.15)" stroke-width=".9"/>
+              <line x1="117" y1="134" x2="152" y2="134" stroke="rgba(212,160,23,.14)" stroke-width=".9"/>
+              <!-- Col 3 text lines + photo -->
+              <line x1="173" y1="86" x2="230" y2="86" stroke="rgba(212,160,23,.2)" stroke-width=".9"/>
+              <line x1="173" y1="98" x2="228" y2="98" stroke="rgba(212,160,23,.17)" stroke-width=".9"/>
+              <rect x="173" y="108" width="56" height="62" rx="2" fill="rgba(212,160,23,.08)"/>
+              <!-- Year tag -->
+              <rect x="185" y="16" width="56" height="18" rx="9" fill="rgba(212,160,23,.18)" stroke="rgba(212,160,23,.35)" stroke-width="1"/>
+              <text x="213" y="29" text-anchor="middle" font-size="9" fill="rgba(212,160,23,.85)" font-family="serif" font-style="italic">c. 1908</text>
+              <!-- Light sweep -->
+              <path d="M0 0 L55 195 L0 195 Z" fill="rgba(212,160,23,.025)"/>
+            </svg>
+          </div>
+          <div class="coll-overlay" aria-hidden="true"></div>
+          <span class="coll-badge">Hemeroteca</span>
+        </div>
+        <div class="coll-body">
+          <div class="coll-ico"><svg viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6z"/></svg></div>
+          <h3>Hemeroteca Regional</h3>
+          <p>Amplia colección de publicaciones periódicas zulianas desde finales del siglo XIX hasta mediados del XX, incluyendo ediciones de <cite>El Fonógrafo</cite>, <cite>Panorama</cite> y otros órganos de prensa que registraron la vida pública regional.</p>
+          <a href="#ubicacion" class="coll-link" aria-label="Consultar Hemeroteca Regional">
+            Consultar colección
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ UBICACIÓN ═══════════════════ -->
+<section id="ubicacion" aria-labelledby="loc-h2">
+  <div class="container">
+    <div class="loc-grid">
+
+      <div class="loc-info">
+        <span class="section-label reveal">Visítanos</span>
+        <h2 class="section-title reveal d1" id="loc-h2">Atención Presencial<br>y Contacto</h2>
+
+        <div class="info-block reveal d2">
+          <div class="info-block-lbl">Sede Física</div>
+          <div class="info-row">
+            <div class="info-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="info-txt">
+              Centro Histórico de Maracaibo
+              <small>Estado Zulia, República Bolivariana de Venezuela</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-block reveal d3">
+          <div class="info-block-lbl">Horarios de Atención</div>
+          <div class="info-row">
+            <div class="info-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="info-txt">
+              Lunes a Viernes
+              <small>8:00 a.m. – 12:00 m. / 2:00 p.m. – 4:30 p.m.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal d3">
+          <div class="social-lbl">Redes Sociales — Contacto Digital</div>
+          <div class="social-cards">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+               class="soc-card fb" id="social-facebook"
+               aria-label="Página de Facebook del Acervo Histórico del Estado Zulia">
+              <div class="soc-ico">
+                <svg viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </div>
+              <div>
+                <div class="soc-name">Facebook</div>
+                <div class="soc-handle">Acervo Histórico del Zulia</div>
+              </div>
+              <div class="soc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
             </a>
-            <a href="#sobre-nosotros" class="btn btn--secondary">
-              <i class="fa-solid fa-compass"></i> Conocer la Institución
+
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+               class="soc-card ig" id="social-instagram"
+               aria-label="Perfil de Instagram del Acervo Histórico del Estado Zulia">
+              <div class="soc-ico">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <defs><linearGradient id="ig-g" x1="0" y1="24" x2="24" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs>
+                  <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#ig-g)"/>
+                  <rect x="6" y="6" width="12" height="12" rx="3" fill="none" stroke="white" stroke-width="1.5"/>
+                  <circle cx="12" cy="12" r="3" fill="none" stroke="white" stroke-width="1.5"/>
+                  <circle cx="17" cy="7" r="1" fill="white"/>
+                </svg>
+              </div>
+              <div>
+                <div class="soc-name">Instagram</div>
+                <div class="soc-handle">@acervohistoricozulia</div>
+              </div>
+              <div class="soc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
             </a>
           </div>
-
-          <!-- Métricas Destacadas -->
-          <div class="hero__stats">
-            <div class="stat-card">
-              <span class="stat-card__number">+150K</span>
-              <span class="stat-card__label">Documentos Históricos</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-card__number">Siglo XVI</span>
-              <span class="stat-card__label">Orígenes Documentales</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-card__number">100%</span>
-              <span class="stat-card__label">Patrimonio del Zulia</span>
-            </div>
-          </div>
         </div>
       </div>
-    </section>
 
-    <!-- SECCIÓN SOBRE NOSOTROS -->
-    <section id="sobre-nosotros" class="section section--about">
-      <div class="container">
-        
-        <div class="section-header text-center">
-          <span class="section-subtitle"><i class="fa-solid fa-shield-halved"></i> Identidad y Compromiso</span>
-          <h2 class="section-title">El Acervo Histórico del Estado Zulia</h2>
-          <div class="section-divider"></div>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-content">
-            <h3 class="about-heading">Preservando el alma documental de nuestra región</h3>
-            <p class="about-text">
-              El Acervo Histórico del Estado Zulia es el principal centro de conservación documental de la región occidental venezolana. Custodiamos tesoros historiográficos que documentan la fundación de ciudades, protocolos notariales hispánicos y actas fundamentales de nuestra soberanía.
-            </p>
-            <p class="about-text">
-              Desde las Reales Cédulas del siglo XVI hasta las gacetas republicanas y los registros petroleros del siglo XX, nuestra institución ofrece a investigadores, estudiantes y ciudadanos un portal vivo hacia la comprensión de nuestro legado cultural.
-            </p>
-
-            <div class="about-features">
-              <div class="feature-item">
-                <div class="feature-item__icon"><i class="fa-solid fa-box-archive"></i></div>
-                <div>
-                  <h4 class="feature-item__title">Custodia Documental</h4>
-                  <p class="feature-item__desc">Conservación preventiva y catalogación rigurosa de folios, escrituras y documentos de valor histórico permanente.</p>
-                </div>
-              </div>
-              
-              <div class="feature-item">
-                <div class="feature-item__icon"><i class="fa-solid fa-microscope"></i></div>
-                <div>
-                  <h4 class="feature-item__title">Investigación e Historia</h4>
-                  <p class="feature-item__desc">Soporte especializado a historiadores, cronistas e investigadores en el estudio de los orígenes zulianos.</p>
-                </div>
-              </div>
-
-              <div class="feature-item">
-                <div class="feature-item__icon"><i class="fa-solid fa-laptop-code"></i></div>
-                <div>
-                  <h4 class="feature-item__title">Digitalización Abierta</h4>
-                  <p class="feature-item__desc">Preservación digital en alta resolución para democratizar el acceso a fondos patrimoniales únicos.</p>
-                </div>
-              </div>
+      <!-- Map -->
+      <div class="map-panel reveal d2" aria-label="Mapa de ubicación">
+        <div class="map-vis">
+          <div class="map-pin-wrap">
+            <div class="map-pin-body" role="img" aria-label="Marcador de ubicación en Maracaibo">
+              <div class="map-pulse" aria-hidden="true"></div>
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
           </div>
-
-          <div class="about-visual">
-            <div class="about-card-wrapper">
-              <img src="images/biblioteca-perfil.jpg" alt="Muestra de Documento o Material del Acervo Histórico" class="about-img">
-              <div class="about-card-overlay">
-                <span class="about-tag"><i class="fa-solid fa-scroll"></i> Colección Patrimonial</span>
-                <h4>Manuscritos e Iconografía Zuliana</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ejemplo de conservación documental.</p>
-              </div>
-            </div>
+          <div class="map-chip">
+            <strong>Acervo Histórico del Zulia</strong>
+            <span>Centro Histórico · Maracaibo</span>
           </div>
         </div>
-
-      </div>
-    </section>
-
-    <!-- SECCIÓN FONDOS Y COLECCIONES -->
-    <section id="colecciones" class="section section--collections">
-      <div class="container">
-        
-        <div class="section-header text-center">
-          <span class="section-subtitle"><i class="fa-solid fa-folder-open"></i> Catálogo y Resguardo</span>
-          <h2 class="section-title">Fondos Documentales y Archivos</h2>
-          <div class="section-divider"></div>
-          <p class="section-desc">
-            Explore nuestras colecciones clasificadas por períodos cronológicos, documentos notariales, publicaciones periódicas y cartografía histórica del Lago de Maracaibo.
-          </p>
-        </div>
-
-        <!-- Barra de búsqueda y filtros -->
-        <div class="catalog-controls">
-          <div class="search-box">
-            <i class="fa-solid fa-magnifying-glass search-box__icon"></i>
-            <input type="text" id="collectionSearch" class="search-box__input" placeholder="Buscar fondo, época o documento de muestra..." aria-label="Buscar en el catálogo">
-          </div>
-
-          <div class="filter-tabs" role="tablist" aria-label="Filtros de colecciones">
-            <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">Todos</button>
-            <button class="filter-tab" data-filter="colonial" role="tab" aria-selected="false">Época Colonial</button>
-            <button class="filter-tab" data-filter="republicano" role="tab" aria-selected="false">Época Republicana</button>
-            <button class="filter-tab" data-filter="hemeroteca" role="tab" aria-selected="false">Hemeroteca</button>
-            <button class="filter-tab" data-filter="fototeca" role="tab" aria-selected="false">Fototeca & Mapas</button>
-          </div>
-        </div>
-
-        <!-- Grilla de Tarjetas de Colección -->
-        <div class="collections-grid" id="collectionsGrid">
-          
-          <!-- Card 1 -->
-          <article class="collection-card" data-category="colonial">
-            <div class="collection-card__image-container">
-              <img src="images/acervo-historico-edited-logo.jpg" alt="Fondo Escribanías y Reales Cédulas" class="collection-card__img">
-              <span class="collection-card__badge">Colonial</span>
-            </div>
-            <div class="collection-card__body">
-              <span class="collection-card__date"><i class="fa-regular fa-calendar"></i> Siglos XVII - XVIII</span>
-              <h3 class="collection-card__title">Fondo Escribanías y Reales Cédulas</h3>
-              <p class="collection-card__excerpt">
-                Documentación notarial hispánica, protocolos capitulares y reales órdenes emitidas para la Provincia de Maracaibo durante los siglos XVII y XVIII.
-              </p>
-              <div class="collection-card__footer">
-                <button class="btn btn--outline card-detail-btn" data-title="Fondo Escribanías y Reales Cédulas" data-cat="Época Colonial (1600 - 1799)" data-desc="Resguardo de escrituras de propiedades, poderes virreinales, mercedes de tierras y decretos de la Gobernación de Maracaibo bajo el imperio español." data-img="images/acervo-historico-edited-logo.jpg">
-                  <i class="fa-solid fa-eye"></i> Ver Detalles
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="collection-card" data-category="republicano">
-            <div class="collection-card__image-container">
-              <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=800&q=80" alt="Fondo Presidencia del Estado Zulia" class="collection-card__img">
-              <span class="collection-card__badge">Republicano</span>
-            </div>
-            <div class="collection-card__body">
-              <span class="collection-card__date"><i class="fa-regular fa-calendar"></i> Siglo XIX (1821 - 1899)</span>
-              <h3 class="collection-card__title">Fondo Gobernación y Presidencia del Zulia</h3>
-              <p class="collection-card__excerpt">
-                Correspondencia oficial, decretos ejecutivos y archivos parlamentarios que atestiguan el desarrollo político e institucional del Zulia independiente.
-              </p>
-              <div class="collection-card__footer">
-                <button class="btn btn--outline card-detail-btn" data-title="Fondo Gobernación y Presidencia del Zulia" data-cat="Época Republicana (1821 - 1899)" data-desc="Colección documental de actas constitucionales regionales, decretos territoriales y correspondencia con el gobierno central de la Gran Colombia y Venezuela." data-img="https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=800&q=80">
-                  <i class="fa-solid fa-eye"></i> Ver Detalles
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="collection-card" data-category="hemeroteca">
-            <div class="collection-card__image-container">
-              <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80" alt="Hemeroteca Histórica Zuliana" class="collection-card__img">
-              <span class="collection-card__badge">Hemeroteca</span>
-            </div>
-            <div class="collection-card__body">
-              <span class="collection-card__date"><i class="fa-regular fa-calendar"></i> Prensa Siglos XIX y XX</span>
-              <h3 class="collection-card__title">Colección Periódicos y Publicaciones Seriadas</h3>
-              <p class="collection-card__excerpt">
-                Ejemplares históricos de la prensa pionera marabina, gacetas oficiales, diarios literarios y boletines científicos del estado Zulia.
-              </p>
-              <div class="collection-card__footer">
-                <button class="btn btn--outline card-detail-btn" data-title="Colección Periódicos y Publicaciones Seriadas" data-cat="Hemeroteca Regional" data-desc="Compendio periodístico impreso en Maracaibo desde 1821, registrando el debate político, cultural, social y económico de la región." data-img="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80">
-                  <i class="fa-solid fa-eye"></i> Ver Detalles
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 4 -->
-          <article class="collection-card" data-category="fototeca">
-            <div class="collection-card__image-container">
-              <img src="images/estructura-acervo-historico.jpg" alt="Cartografía y Mapas Históricos del Lago" class="collection-card__img">
-              <span class="collection-card__badge">Fototeca & Mapas</span>
-            </div>
-            <div class="collection-card__body">
-              <span class="collection-card__date"><i class="fa-regular fa-calendar"></i> Siglos XVIII - XX</span>
-              <h3 class="collection-card__title">Cartografía Histórica del Lago y la Provincia</h3>
-              <p class="collection-card__excerpt">
-                Mapas hidrológicos, planos urbanos coloniales y cartas de navegación que documentan la transformación geofísica del Lago de Maracaibo.
-              </p>
-              <div class="collection-card__footer">
-                <button class="btn btn--outline card-detail-btn" data-title="Cartografía Histórica del Lago y la Provincia" data-cat="Colección Mapas e Iconografía" data-desc="Planos originales trazados por exploradores, ingenieros militares y cartógrafos nacionales que muestran la evolución urbana de Maracaibo y sus cuencas." data-img="images/estructura-acervo-historico.jpg">
-                  <i class="fa-solid fa-eye"></i> Ver Detalles
-                </button>
-              </div>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECCIÓN HITOS HISTÓRICOS / LÍNEA DE TIEMPO -->
-    <section id="linea-tiempo" class="section section--timeline">
-      <div class="container">
-        
-        <div class="section-header text-center">
-          <span class="section-subtitle"><i class="fa-solid fa-timeline"></i> Recorrido Temporal</span>
-          <h2 class="section-title">Hitos en la Memoria del Zulia</h2>
-          <div class="section-divider"></div>
-        </div>
-
-        <div class="timeline">
-          
-          <div class="timeline-item">
-            <div class="timeline-dot"><i class="fa-solid fa-ship"></i></div>
-            <div class="timeline-content">
-              <span class="timeline-date">1499 - 1529</span>
-              <h3 class="timeline-title">Primeros Avistamientos y Encuentro Cultural</h3>
-              <p class="timeline-desc">
-                Primeras crónicas navales de Alonso de Ojeda y Amerigo Vespucci al divisar los palafitos sobre el Lago de Maracaibo, dando origen al nombre de Venezuela.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"><i class="fa-solid fa-flag"></i></div>
-            <div class="timeline-content">
-              <span class="timeline-date">28 de Enero de 1821</span>
-              <h3 class="timeline-title">Pronunciamiento de Maracaibo</h3>
-              <p class="timeline-desc">
-                La Provincia de Maracaibo se declara libre del yugo español y se une rotundamente a la gesta emancipadora grancolombiana liderada por el Libertador Simón Bolívar.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"><i class="fa-solid fa-anchor"></i></div>
-            <div class="timeline-content">
-              <span class="timeline-date">24 de Julio de 1823</span>
-              <h3 class="timeline-title">Batalla Naval del Lago de Maracaibo</h3>
-              <p class="timeline-desc">
-                Victoria decisiva de la armada patriota al mando del Almirante José Prudencio Padilla, sellando definitivamente la Independencia de Venezuela en aguas del Zulia.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"><i class="fa-solid fa-oil-well"></i></div>
-            <div class="timeline-content">
-              <span class="timeline-date">Siglo XX</span>
-              <h3 class="timeline-title">Evolución Industrial y Modernización</h3>
-              <p class="timeline-desc">
-                Reventón del pozo Zumaque I en 1914 y Barroso II en 1922, consolidando al Zulia como epicentro energético, industrial y cultural de la nación.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECCIÓN SERVICIOS -->
-    <section id="servicios" class="section section--services">
-      <div class="container">
-        
-        <div class="section-header text-center">
-          <span class="section-subtitle"><i class="fa-solid fa-hand-holding-hand"></i> Atención al Ciudadano</span>
-          <h2 class="section-title">Servicios para Investigadores y Comunidad</h2>
-          <div class="section-divider"></div>
-        </div>
-
-        <div class="services-grid">
-          
-          <div class="service-card">
-            <div class="service-card__icon"><i class="fa-solid fa-book-open-reader"></i></div>
-            <h3 class="service-card__title">Consulta en Sala</h3>
-            <p class="service-card__desc">
-              Acceso regulado a salas de lectura con asesores especializados para examinar manuscritos originales y legajos históricos.
-            </p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-card__icon"><i class="fa-solid fa-file-pdf"></i></div>
-            <h3 class="service-card__title">Digitalización & Copias</h3>
-            <p class="service-card__desc">
-              Servicio de escaneo de alta resolución y certificación de folios antiguos para proyectos académicos e institucionales.
-            </p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-card__icon"><i class="fa-solid fa-sitemap"></i></div>
-            <h3 class="service-card__title">Asesoría Genealógica</h3>
-            <p class="service-card__desc">
-              Acompañamiento técnico en la rastreabilidad de linajes, fe de bautismo coloniales y registros de estado civil decimonónicos.
-            </p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-card__icon"><i class="fa-solid fa-users-line"></i></div>
-            <h3 class="service-card__title">Visitas Guiadas y Talleres</h3>
-            <p class="service-card__desc">
-              Jornadas pedagógicas e itinerantes diseñadas para escuelas, universidades y delegaciones culturales de la región.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECCIÓN CONTACTO -->
-    <section id="contacto" class="section section--contact">
-      <div class="container">
-        
-        <div class="contact-card">
-          <div class="contact-grid">
-            <div class="contact-info">
-              <span class="section-subtitle light"><i class="fa-solid fa-paper-plane"></i> Contacto e Información</span>
-              <h2 class="contact-title">Visítanos o Solicita una Cita de Investigación</h2>
-              <p class="contact-text">
-                Estamos a su disposición para coordinar investigaciones presenciales, consultas de fondos archivísticos y visitas institucionales.
-              </p>
-
-              <div class="contact-details">
-                <div class="contact-detail">
-                  <i class="fa-solid fa-location-dot"></i>
-                  <div>
-                    <strong>Ubicación:</strong>
-                    <span>Calle 94 (Carabobo), Maracaibo, Estado Zulia.</span>
-                  </div>
-                </div>
-                <div class="contact-detail">
-                  <i class="fa-solid fa-envelope"></i>
-                  <div>
-                    <strong>Correo Electrónico:</strong>
-                    <span>contacto@acervohistoricozulia.gob.ve</span>
-                  </div>
-                </div>
-                <div class="contact-detail">
-                  <i class="fa-solid fa-phone"></i>
-                  <div>
-                    <strong>Teléfono:</strong>
-                    <span>+58 (261) 700-0000</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <form class="contact-form" id="contactForm" onsubmit="event.preventDefault(); alert('Formulario de consulta enviado con éxito.');">
-              <div class="form-group">
-                <label for="name">Nombre Completo</label>
-                <input type="text" id="name" required placeholder="Ej. Dr. Arturo Uslar" class="form-input">
-              </div>
-              <div class="form-group">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" required placeholder="investigador@ejemplo.com" class="form-input">
-              </div>
-              <div class="form-group">
-                <label for="subject">Motivo de Consulta</label>
-                <select id="subject" class="form-input">
-                  <option>Investigación Académica</option>
-                  <option>Consulta Genealógica</option>
-                  <option>Visita Guiada</option>
-                  <option>Otro Asunto</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="message">Mensaje</label>
-                <textarea id="message" rows="4" required placeholder="Escriba aquí los detalles de su solicitud de investigación o consulta..." class="form-input"></textarea>
-              </div>
-              <button type="submit" class="btn btn--primary btn--block">
-                <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
-              </button>
-            </form>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- PIE DE PÁGINA (FOOTER) -->
-  <footer class="footer">
-    <div class="container footer__container">
-      <div class="footer__brand">
-        <div class="footer__logo-group">
-          <img src="images/acervo-historico-logo.jpg" alt="Logo Acervo Histórico del Zulia" class="footer__logo">
-          <div>
-            <h3 class="footer__title">Acervo Histórico del Estado Zulia</h3>
-            <p class="footer__tagline">Custodio de la Memoria y la Identidad Regional</p>
-          </div>
-        </div>
-        <p class="footer__desc">
-          Institución gubernamental dedicada al rescate, conservación preventiva, catalogación digital y permanente difusión del patrimonio histórico de la región zuliana.
-        </p>
+        <div class="map-foot">📍 Centro Histórico de Maracaibo, Estado Zulia, Venezuela</div>
       </div>
 
-      <div class="footer__links">
-        <h4 class="footer__heading">Enlaces Rápidos</h4>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer role="contentinfo">
+  <div class="flag-stripe" aria-label="Franja representativa de los colores de la Bandera del Estado Zulia" title="Azul Lago · Oro Solar · Negro Petróleo"></div>
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="nav-logo" style="margin-bottom:.5rem;">
+          <div class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              <line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="13" y2="11"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">Acervo Histórico</span>
+            <span class="logo-sub" style="color:rgba(255,255,255,.45);">Estado Zulia · Venezuela</span>
+          </div>
+        </div>
+        <p>Institución pública dedicada a la preservación, organización y difusión del patrimonio documental e histórico del Estado Zulia. Guardianes de la memoria colectiva de nuestra región.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Navegación</h4>
         <ul>
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-          <li><a href="#colecciones">Fondos Documentales</a></li>
-          <li><a href="#linea-tiempo">Hitos Históricos</a></li>
-          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#linea-del-tiempo">Línea del Tiempo</a></li>
+          <li><a href="#colecciones">Colecciones</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
         </ul>
       </div>
-
-      <div class="footer__social">
-        <h4 class="footer__heading">Síguenos</h4>
-        <p class="footer__social-desc">Conéctate con nuestras plataformas oficiales de divulgación cultural e histórica.</p>
-        <div class="social-icons">
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-        </div>
+      <div class="foot-col">
+        <h4>Información</h4>
+        <ul>
+          <li><span>📍 Centro Histórico, Maracaibo</span></li>
+          <li><span>🕐 Lun–Vie: 8 a.m. – 4:30 p.m.</span></li>
+          <li><span>📵 Sin correo electrónico</span></li>
+          <li><a href="https://www.facebook.com" target="_blank" rel="noopener">📘 Facebook</a></li>
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener">📷 Instagram</a></li>
+        </ul>
       </div>
     </div>
-
-    <div class="footer__bottom">
-      <div class="container footer__bottom-content">
-        <p>&copy; 2026 Acervo Histórico del Estado Zulia. Todos los derechos reservados.</p>
-        <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
-          <i class="fa-solid fa-arrow-up"></i>
-        </button>
-      </div>
-    </div>
-  </footer>
-
-  <!-- MODAL DETALLE DE DOCUMENTO -->
-  <div class="modal" id="detailModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
-    <div class="modal__overlay" id="modalOverlay"></div>
-    <div class="modal__content">
-      <button class="modal__close" id="modalClose" aria-label="Cerrar ventana modal">&times;</button>
-      <div class="modal__grid">
-        <div class="modal__visual">
-          <img src="" id="modalImg" alt="Vista previa del documento" class="modal__img">
-        </div>
-        <div class="modal__details">
-          <span class="badge" id="modalCat">Categoría</span>
-          <h3 id="modalTitle" class="modal__title">Título del Archivo</h3>
-          <p id="modalDesc" class="modal__desc">Lorem ipsum dolor sit amet description...</p>
-          
-          <div class="modal__meta">
-            <div><strong>Formato:</strong> Manuscrito / Papel Sellado</div>
-            <div><strong>Estado de Conservación:</strong> Digitalizado / Excelente</div>
-            <div><strong>Ubicación en Sede:</strong> Estante A-4, Legajo 12</div>
-          </div>
-
-          <div class="modal__actions">
-            <button class="btn btn--primary" onclick="alert('Solicitud de consulta presencial enviada.')">
-              <i class="fa-solid fa-calendar-check"></i> Solicitar Consulta Presencial
-            </button>
-          </div>
-        </div>
-      </div>
+    <div class="foot-bot">
+      <p class="foot-copy">© <span id="yr"></span> Acervo Histórico del Estado Zulia. Todos los derechos reservados.</p>
+      <p class="foot-credit">Maracaibo · Estado Zulia · República Bolivariana de Venezuela</p>
     </div>
   </div>
-
-  <!-- LIGHTBOX PARA IMÁGENES -->
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <div class="lightbox__overlay" id="lightboxOverlay"></div>
-    <div class="lightbox__content">
-      <button class="lightbox__close" id="lightboxClose">&times;</button>
-      <img src="" id="lightboxImg" alt="Imagen en tamaño completo">
-      <div id="lightboxCaption" class="lightbox__caption"></div>
-    </div>
-  </div>
-
-  <!-- Script Principal JavaScript -->
-  <script src="script.js"></script>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
