@@ -523,7 +523,12 @@ section { padding: 5rem 0; }
   background: linear-gradient(145deg, #0B1F3A 0%, #162B4D 55%, #0A192F 100%);
   display: flex; align-items: center; justify-content: center;
 }
-.about-visual-main .shelf-art { width: 85%; opacity: .88; }
+.about-visual-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 /* Text side */
 .about-title {
@@ -1285,39 +1290,46 @@ footer { background: var(--black); color: rgba(255,255,255,.68); padding: 3rem 0
     border-top: 1px solid rgba(255,255,255,.07);
     padding-left: 0; padding-top: .875rem;
   }
-  /* Timeline Mobile Redesign: All cards positioned cleanly on the right side of the vertical timeline */
+  /* Timeline Mobile Clean Vertical Stack: Full width cards aligned to the right of node */
   .timeline {
-    padding-left: 2.75rem !important;
     position: relative !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
   }
   .timeline::before {
     left: 20px !important;
     transform: none !important;
+    width: 3px !important;
   }
   .tl-row,
   .tl-row.flip {
-    display: block !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
     position: relative !important;
-    margin-bottom: 2rem !important;
     width: 100% !important;
+    margin-bottom: 2rem !important;
+    gap: 0 !important;
   }
   .tl-empty {
     display: none !important;
   }
   .tl-mid {
-    position: absolute !important;
-    left: -2.75rem !important;
-    top: 0 !important;
-    width: 40px !important;
-    height: 40px !important;
+    order: 1 !important;
+    flex: 0 0 42px !important;
+    width: 42px !important;
+    height: 42px !important;
+    position: relative !important;
+    z-index: 2 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    z-index: 2 !important;
   }
   .tl-node {
     width: 40px !important;
     height: 40px !important;
+    margin: 0 !important;
   }
   .tl-node svg {
     width: 18px !important;
@@ -1325,15 +1337,33 @@ footer { background: var(--black); color: rgba(255,255,255,.68); padding: 3rem 0
   }
   .tl-left,
   .tl-right {
-    display: block !important;
-    width: 100% !important;
-    padding: 0 !important;
+    order: 2 !important;
+    flex: 1 1 auto !important;
+    width: calc(100% - 42px) !important;
+    min-width: 0 !important;
+    padding: 0 0 0 .75rem !important;
     margin: 0 !important;
     text-align: left !important;
+    display: block !important;
   }
   .tl-card {
     width: 100% !important;
+    max-width: 100% !important;
     box-sizing: border-box !important;
+    padding: 1.125rem 1.125rem !important;
+  }
+  .tl-year {
+    display: inline-block !important;
+    margin-bottom: .5rem !important;
+  }
+  .tl-title {
+    font-size: 1.1rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: .5rem !important;
+  }
+  .tl-desc {
+    font-size: .875rem !important;
+    line-height: 1.55 !important;
   }
   .foot-top { grid-template-columns: 1fr; gap: 2rem; }
   .coll-card { max-width: 100%; }
