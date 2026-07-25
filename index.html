@@ -4,13 +4,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Acervo Histórico del Estado Zulia | Guardianes de la Memoria Regional</title>
-  <meta name="description" content="El Acervo Histórico del Estado Zulia preserva y difunde el patrimonio documental de nuestra región. Mapas, manuscritos y registros históricos del Estado Zulia." />
+  <meta name="description" content="El Acervo Histórico del Estado Zulia preserva y difunde el patrimonio documental de nuestra región. Mapas, manuscritos, fototeca y registros históricos de la entidad zuliana." />
+  <meta name="theme-color" content="#0B1F3A" />
+  
+  <!-- Open Graph / Social Sharing Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Acervo Histórico del Estado Zulia" />
+  <meta property="og:description" content="Guardianes del patrimonio documental y la memoria viva del Estado Zulia, Venezuela." />
+  <meta property="og:image" content="images/Biblioteca_Pública_del_Estado_Zulia.jpg" />
+  <meta property="og:locale" content="es_VE" />
+  <meta property="og:site_name" content="Acervo Histórico del Estado Zulia" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Acervo Histórico del Estado Zulia" />
+  <meta name="twitter:description" content="Preservación, conservación y consulta del patrimonio documental e histórico del Estado Zulia." />
+  <meta name="twitter:image" content="images/Biblioteca_Pública_del_Estado_Zulia.jpg" />
+
+  <!-- JSON-LD Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ArchiveOrganization",
+    "name": "Acervo Histórico del Estado Zulia",
+    "description": "Institución pública encargada de custodiar, organizar y difundir la memoria histórica documental del Estado Zulia.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Maracaibo",
+      "addressRegion": "Estado Zulia",
+      "addressCountry": "VE"
+    },
+    "knowsAbout": ["Historia del Zulia", "Mapoteca Histórica", "Fototeca Zuliana", "Documentos Coloniales"]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+<!-- Skip link for screen readers & keyboard navigation (WCAG 2.1 AA) -->
+<a href="#inicio" class="skip-link">Saltar al contenido principal</a>
 
 <!-- ═══════════════════ NAVBAR ═══════════════════ -->
 <nav id="navbar" role="navigation" aria-label="Navegación principal">
@@ -88,7 +124,7 @@
         <div class="stat-ico" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         </div>
-        <div><div class="stat-n">+50.000</div><div class="stat-l">Documentos catalogados</div></div>
+        <div><div class="stat-n">+800</div><div class="stat-l">Documentos y tomos históricos catalogados</div></div>
       </div>
       <div class="stat">
         <div class="stat-ico" aria-hidden="true">
@@ -323,205 +359,320 @@
       <h2 class="section-title reveal d1" id="coll-h2">Colecciones Documentales</h2>
       <p class="section-sub reveal d2">Explora los fondos que conforman nuestro repositorio histórico: una ventana al pasado que preserva la identidad y la memoria del pueblo zuliano.</p>
     </div>
-    <div class="coll-grid">
+    
+    <!-- Carousel Wrapper with Navigation Arrows -->
+    <div class="coll-carousel-wrapper reveal d3">
+      <button id="coll-prev" class="carousel-arrow prev" aria-label="Colecciones anteriores" title="Anterior">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
 
-      <!-- Card 1 -->
-      <article class="coll-card reveal" aria-label="Colección Mapoteca Histórica">
-        <div class="coll-thumb">
-          <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#2a1f0e 0%,#4a3520 100%);">
-            <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
-              <!-- Parchment map base -->
-              <rect width="260" height="195" fill="url(#mg1)"/>
-              <defs><linearGradient id="mg1" x1="0" y1="0" x2="260" y2="195" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#2a1f0e"/><stop offset="100%" stop-color="#3c2a14"/></linearGradient></defs>
-              <!-- Map body -->
-              <rect x="20" y="15" width="220" height="165" rx="4" fill="rgba(220,185,110,.1)" stroke="rgba(212,160,23,.3)" stroke-width="1.2"/>
-              <!-- Coastline shapes -->
-              <path d="M40 80 Q70 60 100 75 Q130 90 160 70 Q185 55 210 72 L220 80 L210 140 Q185 155 160 140 Q130 150 100 135 Q70 140 40 125 Z" fill="rgba(212,160,23,.08)" stroke="rgba(212,160,23,.28)" stroke-width="1.2"/>
-              <!-- Lake shape -->
-              <ellipse cx="130" cy="108" rx="35" ry="24" fill="rgba(27,58,107,.22)" stroke="rgba(100,160,220,.35)" stroke-width="1"/>
-              <!-- Grid lines -->
-              <line x1="20" y1="60" x2="240" y2="60" stroke="rgba(212,160,23,.12)" stroke-width=".8"/>
-              <line x1="20" y1="100" x2="240" y2="100" stroke="rgba(212,160,23,.12)" stroke-width=".8"/>
-              <line x1="20" y1="140" x2="240" y2="140" stroke="rgba(212,160,23,.12)" stroke-width=".8"/>
-              <line x1="80" y1="15" x2="80" y2="180" stroke="rgba(212,160,23,.12)" stroke-width=".8"/>
-              <line x1="140" y1="15" x2="140" y2="180" stroke="rgba(212,160,23,.12)" stroke-width=".8"/>
-              <line x1="200" y1="15" x2="200" y2="180" stroke="rgba(212,160,23,.12)" stroke-width=".8"/>
-              <!-- Compass rose -->
-              <circle cx="210" cy="160" r="14" fill="rgba(212,160,23,.08)" stroke="rgba(212,160,23,.3)" stroke-width="1"/>
-              <path d="M210 148 L212 157 L210 160 L208 157 Z" fill="rgba(212,160,23,.7)"/>
-              <path d="M210 172 L212 163 L210 160 L208 163 Z" fill="rgba(255,255,255,.25)"/>
-              <path d="M198 160 L207 158 L210 160 L207 162 Z" fill="rgba(255,255,255,.25)"/>
-              <path d="M222 160 L213 158 L210 160 L213 162 Z" fill="rgba(255,255,255,.25)"/>
-              <!-- Rolled edges -->
-              <path d="M20 15 Q30 10 40 15" stroke="rgba(212,160,23,.3)" stroke-width="1.5" fill="none"/>
-              <path d="M220 15 Q230 10 240 15" stroke="rgba(212,160,23,.3)" stroke-width="1.5" fill="none"/>
-              <!-- Gold glow -->
-              <ellipse cx="130" cy="97" rx="70" ry="50" fill="rgba(212,160,23,.03)"/>
-            </svg>
-          </div>
-          <div class="coll-overlay" aria-hidden="true"></div>
-          <span class="coll-badge">Mapoteca</span>
+      <div class="coll-carousel-track-container" id="coll-track-container">
+        <div class="coll-carousel-track" id="coll-track">
+
+          <!-- Card 1 -->
+          <article class="coll-card" aria-label="Archivo General del Estado Zulia Carlos Medina Chirinos">
+            <div class="coll-thumb">
+              <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#1f2937 0%,#111827 100%);">
+                <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
+                  <rect width="260" height="195" fill="#111827"/>
+                  <rect x="30" y="25" width="200" height="145" rx="4" fill="rgba(212,160,23,.08)" stroke="rgba(212,160,23,.3)" stroke-width="1.2"/>
+                  <path d="M50 50h160M50 75h140M50 100h150M50 125h110" stroke="rgba(255,255,255,.2)" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="180" cy="125" r="14" fill="rgba(212,160,23,.2)" stroke="rgba(212,160,23,.6)" stroke-width="1.2"/>
+                  <path d="M180 117l2 5 5 1-4 3 1 5-4-3-4 3 1-5-4-3 5-1z" fill="#d4a017"/>
+                </svg>
+              </div>
+              <div class="coll-overlay" aria-hidden="true"></div>
+              <span class="coll-badge">Archivo General</span>
+            </div>
+            <div class="coll-body">
+              <div class="coll-ico"><svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
+              <h3>Archivo General "Carlos Medina Chirinos"</h3>
+              <p>Custodia el acervo documental e histórico de los organismos públicos y privados del Estado Zulia desde el siglo XVII, preservando manuscritos, actas de gobierno y expedientes administrativos.</p>
+              <a href="#ubicacion" class="coll-link" aria-label="Consultar Archivo General Carlos Medina Chirinos">
+                Consultar unidad
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="coll-card" aria-label="Biblioteca de Temas Zulianos Hercolino Adrianza Álvarez">
+            <div class="coll-thumb">
+              <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#1e3a5f 0%,#0f172a 100%);">
+                <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
+                  <rect width="260" height="195" fill="#0f172a"/>
+                  <path d="M40 150V45c0-5.5 4.5-10 10-10h70v115H50c-5.5 0-10 0-10 0z" fill="rgba(212,160,23,.12)" stroke="rgba(212,160,23,.4)" stroke-width="1.2"/>
+                  <path d="M220 150V45c0-5.5-4.5-10-10-10h-70v115h70c5.5 0 10 0 10 0z" fill="rgba(212,160,23,.08)" stroke="rgba(212,160,23,.3)" stroke-width="1.2"/>
+                  <line x1="120" y1="35" x2="120" y2="150" stroke="rgba(212,160,23,.6)" stroke-width="2"/>
+                  <line x1="60" y1="65" x2="105" y2="65" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/>
+                  <line x1="60" y1="85" x2="105" y2="85" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/>
+                  <line x1="135" y1="65" x2="180" y2="65" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/>
+                  <line x1="135" y1="85" x2="180" y2="85" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/>
+                </svg>
+              </div>
+              <div class="coll-overlay" aria-hidden="true"></div>
+              <span class="coll-badge">Biblioteca</span>
+            </div>
+            <div class="coll-body">
+              <div class="coll-ico"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+              <h3>Biblioteca "Hercolino Adrianza Álvarez"</h3>
+              <p>Centro bibliográfico especializado en la producción literaria, histórica, científica y cultural sobre el Zulia, con miles de volúmenes, ensayos y obras de autores regionales.</p>
+              <a href="#ubicacion" class="coll-link" aria-label="Consultar Biblioteca Hercolino Adrianza Álvarez">
+                Consultar unidad
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="coll-card" aria-label="Planoteca y Mapoteca José Encarnación Serrano">
+            <div class="coll-thumb">
+              <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#2a1f0e 0%,#3c2a14 100%);">
+                <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
+                  <rect width="260" height="195" fill="#2a1f0e"/>
+                  <rect x="20" y="15" width="220" height="165" rx="4" fill="rgba(220,185,110,.1)" stroke="rgba(212,160,23,.3)" stroke-width="1.2"/>
+                  <path d="M40 80 Q70 60 100 75 Q130 90 160 70 Q185 55 210 72 L220 80 L210 140 Q185 155 160 140 Q130 150 100 135 Q70 140 40 125 Z" fill="rgba(212,160,23,.08)" stroke="rgba(212,160,23,.28)" stroke-width="1.2"/>
+                  <ellipse cx="130" cy="108" rx="35" ry="24" fill="rgba(27,58,107,.22)" stroke="rgba(100,160,220,.35)" stroke-width="1"/>
+                  <circle cx="210" cy="160" r="14" fill="rgba(212,160,23,.08)" stroke="rgba(212,160,23,.3)" stroke-width="1"/>
+                  <path d="M210 148 L212 157 L210 160 L208 157 Z" fill="rgba(212,160,23,.7)"/>
+                </svg>
+              </div>
+              <div class="coll-overlay" aria-hidden="true"></div>
+              <span class="coll-badge">Planoteca y Mapoteca</span>
+            </div>
+            <div class="coll-body">
+              <div class="coll-ico"><svg viewBox="0 0 24 24"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div>
+              <h3>Mapoteca "José Encarnación Serrano"</h3>
+              <p>Resguarda valiosos mapas coloniales, planos urbanísticos de Maracaibo, cartas náuticas del Lago y diseños de infraestructura que registran la evolución geográfica e hidrográfica zuliana.</p>
+              <a href="#ubicacion" class="coll-link" aria-label="Consultar Mapoteca José Encarnación Serrano">
+                Consultar unidad
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="coll-card" aria-label="Fototeca Arturo Lares Baralt">
+            <div class="coll-thumb">
+              <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#1a2640 0%,#263450 100%);">
+                <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
+                  <rect width="260" height="195" fill="#1a2640"/>
+                  <rect x="35" y="30" width="190" height="135" rx="6" fill="rgba(255,255,255,.06)" stroke="rgba(212,160,23,.35)" stroke-width="1.3"/>
+                  <circle cx="130" cy="97" r="32" fill="rgba(212,160,23,.1)" stroke="rgba(212,160,23,.5)" stroke-width="1.5"/>
+                  <circle cx="130" cy="97" r="18" fill="rgba(255,255,255,.08)"/>
+                  <rect x="175" y="45" width="30" height="12" rx="3" fill="rgba(212,160,23,.3)"/>
+                </svg>
+              </div>
+              <div class="coll-overlay" aria-hidden="true"></div>
+              <span class="coll-badge">Fototeca</span>
+            </div>
+            <div class="coll-body">
+              <div class="coll-ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <h3>Fototeca "Arturo Lares Baralt"</h3>
+              <p>Repositorio fotográfico con más de ocho mil imágenes originales que inmortalizan la arquitectura marabina, el auge petrolero, la vida cotidiana y retratos célebres de los siglos XIX y XX.</p>
+              <a href="#ubicacion" class="coll-link" aria-label="Consultar Fototeca Arturo Lares Baralt">
+                Consultar unidad
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="coll-card" aria-label="Gacetas Oficiales Jesús Enrique Lossada">
+            <div class="coll-thumb">
+              <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#1c2830 0%,#2a3840 100%);">
+                <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
+                  <rect width="260" height="195" fill="#1c2830"/>
+                  <rect x="40" y="25" width="180" height="145" rx="4" fill="rgba(230,210,155,.09)" stroke="rgba(212,160,23,.3)" stroke-width="1.3"/>
+                  <rect x="52" y="38" width="156" height="18" rx="2" fill="rgba(212,160,23,.28)"/>
+                  <line x1="52" y1="70" x2="208" y2="70" stroke="rgba(212,160,23,.25)" stroke-width="1"/>
+                  <line x1="52" y1="85" x2="208" y2="85" stroke="rgba(212,160,23,.18)" stroke-width="1"/>
+                  <line x1="52" y1="100" x2="190" y2="100" stroke="rgba(212,160,23,.18)" stroke-width="1"/>
+                  <line x1="52" y1="115" x2="200" y2="115" stroke="rgba(212,160,23,.18)" stroke-width="1"/>
+                  <line x1="52" y1="130" x2="175" y2="130" stroke="rgba(212,160,23,.18)" stroke-width="1"/>
+                </svg>
+              </div>
+              <div class="coll-overlay" aria-hidden="true"></div>
+              <span class="coll-badge">Gacetas Oficiales</span>
+            </div>
+            <div class="coll-body">
+              <div class="coll-ico"><svg viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6z"/></svg></div>
+              <h3>Gacetas Oficiales "Jesús Enrique Lossada"</h3>
+              <p>Colección legislativa y jurídica que compila las ediciones impresas de las Gacetas Oficiales del Estado Zulia, decretos del Ejecutivo Regional y resoluciones históricas institucionales.</p>
+              <a href="#ubicacion" class="coll-link" aria-label="Consultar Gacetas Oficiales Jesús Enrique Lossada">
+                Consultar unidad
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="coll-card" aria-label="Unidad de Investigación">
+            <div class="coll-thumb">
+              <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#24142c 0%,#391f45 100%);">
+                <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
+                  <rect width="260" height="195" fill="#24142c"/>
+                  <circle cx="115" cy="90" r="38" fill="rgba(212,160,23,.08)" stroke="rgba(212,160,23,.4)" stroke-width="1.8"/>
+                  <line x1="142" y1="117" x2="185" y2="160" stroke="rgba(212,160,23,.6)" stroke-width="4" stroke-linecap="round"/>
+                  <circle cx="115" cy="90" r="22" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/>
+                  <path d="M100 90h30M115 75v30" stroke="rgba(212,160,23,.5)" stroke-width="1.2"/>
+                </svg>
+              </div>
+              <div class="coll-overlay" aria-hidden="true"></div>
+              <span class="coll-badge">Investigación</span>
+            </div>
+            <div class="coll-body">
+              <div class="coll-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+              <h3>Unidad de Investigación</h3>
+              <p>Equipo multidisciplinario encargado de desarrollar proyectos historiográficos, asesorar investigadores universitarios y producir publicaciones académicas sobre el patrimonio regional.</p>
+              <a href="#ubicacion" class="coll-link" aria-label="Consultar Unidad de Investigación">
+                Consultar unidad
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 7 -->
+          <article class="coll-card" aria-label="Unidad de Historia Familiar">
+            <div class="coll-thumb">
+              <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#132e27 0%,#214a3e 100%);">
+                <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
+                  <rect width="260" height="195" fill="#132e27"/>
+                  <path d="M130 160V95M130 95L90 65M130 95l40-30M90 65V40M170 65V40" stroke="rgba(212,160,23,.4)" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="130" cy="160" r="6" fill="#d4a017"/>
+                  <circle cx="90" cy="40" r="6" fill="rgba(212,160,23,.7)"/>
+                  <circle cx="170" cy="40" r="6" fill="rgba(212,160,23,.7)"/>
+                  <circle cx="130" cy="95" r="5" fill="rgba(255,255,255,.4)"/>
+                </svg>
+              </div>
+              <div class="coll-overlay" aria-hidden="true"></div>
+              <span class="coll-badge">Historia Familiar</span>
+            </div>
+            <div class="coll-body">
+              <div class="coll-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+              <h3>Unidad de Historia Familiar</h3>
+              <p>Servicio especializado dedicado a la genealogía e investigación de linajes zulianos a través de libros parroquiales, registros civiles, censos antiguos y expedientes matrimoniales.</p>
+              <a href="#ubicacion" class="coll-link" aria-label="Consultar Unidad de Historia Familiar">
+                Consultar unidad
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 8 -->
+          <article class="coll-card" aria-label="Unidad de Procesamiento Documental">
+            <div class="coll-thumb">
+              <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#2d1f10 0%,#4a341b 100%);">
+                <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
+                  <rect width="260" height="195" fill="#2d1f10"/>
+                  <rect x="50" y="30" width="160" height="135" rx="5" fill="rgba(255,255,255,.05)" stroke="rgba(212,160,23,.3)" stroke-width="1.2"/>
+                  <path d="M70 60h120M70 85h120M70 110h80" stroke="rgba(212,160,23,.4)" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M160 120l15 15 30-30" stroke="#d4a017" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="coll-overlay" aria-hidden="true"></div>
+              <span class="coll-badge">Procesamiento Documental</span>
+            </div>
+            <div class="coll-body">
+              <div class="coll-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              <h3>Unidad de Procesamiento Documental</h3>
+              <p>Área técnica responsable de la clasificación, ordenamiento, inventariado, catalogación y foliatura bajo estándares internacionales de archivística y conservación.</p>
+              <a href="#ubicacion" class="coll-link" aria-label="Consultar Unidad de Procesamiento Documental">
+                Consultar unidad
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 9 -->
+          <article class="coll-card" aria-label="Unidad de Digitalización">
+            <div class="coll-thumb">
+              <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#0c2d48 0%,#145da0 100%);">
+                <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
+                  <rect width="260" height="195" fill="#0c2d48"/>
+                  <rect x="40" y="35" width="180" height="120" rx="6" fill="rgba(255,255,255,.08)" stroke="rgba(100,200,255,.4)" stroke-width="1.3"/>
+                  <path d="M60 80l35-25 35 25M130 80l35-25 35 25" stroke="rgba(100,200,255,.6)" stroke-width="1.5" stroke-linecap="round"/>
+                  <line x1="50" y1="115" x2="210" y2="115" stroke="rgba(212,160,23,.6)" stroke-width="2"/>
+                  <circle cx="130" cy="115" r="6" fill="#d4a017"/>
+                </svg>
+              </div>
+              <div class="coll-overlay" aria-hidden="true"></div>
+              <span class="coll-badge">Digitalización</span>
+            </div>
+            <div class="coll-body">
+              <div class="coll-ico"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+              <h3>Unidad de Digitalización</h3>
+              <p>Laboratorio tecnológico de escaneo de alta resolución y preservación digital encargada de convertir valiosos tomos físicos en documentos electrónicos para consulta remota.</p>
+              <a href="#ubicacion" class="coll-link" aria-label="Consultar Unidad de Digitalización">
+                Consultar unidad
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 10 -->
+          <article class="coll-card" aria-label="Casa de la Capitulación">
+            <div class="coll-thumb">
+              <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#3b1700 0%,#5a2400 100%);">
+                <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
+                  <rect width="260" height="195" fill="#3b1700"/>
+                  <polygon points="130,30 30,85 230,85" fill="rgba(212,160,23,.12)" stroke="rgba(212,160,23,.4)" stroke-width="1.3"/>
+                  <rect x="45" y="85" width="170" height="80" fill="rgba(255,255,255,.06)" stroke="rgba(212,160,23,.3)" stroke-width="1.2"/>
+                  <rect x="110" y="115" width="40" height="50" rx="20" fill="rgba(212,160,23,.2)" stroke="rgba(212,160,23,.6)" stroke-width="1.2"/>
+                  <rect x="65" y="105" width="25" height="30" fill="rgba(255,255,255,.1)"/>
+                  <rect x="170" y="105" width="25" height="30" fill="rgba(255,255,255,.1)"/>
+                </svg>
+              </div>
+              <div class="coll-overlay" aria-hidden="true"></div>
+              <span class="coll-badge">Monumento Nacional</span>
+            </div>
+            <div class="coll-body">
+              <div class="coll-ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M3 7v14M21 7v14M6 21V10M18 21V10M12 21V10M12 3L2 7h20L12 3z"/></svg></div>
+              <h3>Casa de la Capitulación</h3>
+              <p>Monumento Histórico Colonial del siglo XVIII donde se firmó la Capitulación tras la Batalla Naval del Lago de Maracaibo en 1823, sellando la independencia de Venezuela.</p>
+              <a href="#ubicacion" class="coll-link" aria-label="Consultar Casa de la Capitulación">
+                Consultar espacio
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 11 -->
+          <article class="coll-card" aria-label="Museo Histórico General Rafael Urdaneta">
+            <div class="coll-thumb">
+              <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#2b2306 0%,#473a0c 100%);">
+                <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
+                  <rect width="260" height="195" fill="#2b2306"/>
+                  <circle cx="130" cy="97" r="45" fill="rgba(212,160,23,.1)" stroke="rgba(212,160,23,.4)" stroke-width="1.5"/>
+                  <path d="M130 65l6 14 15 2-11 11 3 15-13-7-13 7 3-15-11-11 15-2z" fill="#d4a017"/>
+                </svg>
+              </div>
+              <div class="coll-overlay" aria-hidden="true"></div>
+              <span class="coll-badge">Museo Histórico</span>
+            </div>
+            <div class="coll-body">
+              <div class="coll-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+              <h3>Museo General Rafael Urdaneta</h3>
+              <p>Espacio museístico erigido sobre la casa natal del "Brillante" General Rafael Urdaneta, dedicado a la exhibición de pertenencias, armas y reliquias de la Guerra de Independencia.</p>
+              <a href="#ubicacion" class="coll-link" aria-label="Consultar Museo Histórico General Rafael Urdaneta">
+                Consultar museo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
         </div>
-        <div class="coll-body">
-          <div class="coll-ico"><svg viewBox="0 0 24 24"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div>
-          <h3>Mapoteca Histórica</h3>
-          <p>Colección de cartografía histórica: mapas coloniales, planos urbanos de Maracaibo y representaciones del Lago de Maracaibo desde el siglo XVI hasta el XX. Materiales únicos de gran valor geográfico e histórico.</p>
-          <a href="#ubicacion" class="coll-link" aria-label="Consultar Mapoteca Histórica">
-            Consultar colección
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </article>
+      </div>
 
-      <!-- Card 2 -->
-      <article class="coll-card reveal d1" aria-label="Colección Fototeca Histórica">
-        <div class="coll-thumb">
-          <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#1a2640 0%,#2c3e6a 100%);">
-            <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
-              <defs><linearGradient id="fg1" x1="0" y1="0" x2="260" y2="195" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1a2640"/><stop offset="100%" stop-color="#263450"/></linearGradient></defs>
-              <rect width="260" height="195" fill="url(#fg1)"/>
-              <!-- Photo frames -->
-              <rect x="18" y="18" width="82" height="68" rx="3" fill="rgba(255,255,255,.09)" stroke="rgba(212,160,23,.38)" stroke-width="1.3"/>
-              <ellipse cx="59" cy="46" rx="22" ry="20" fill="rgba(212,160,23,.12)"/>
-              <line x1="24" y1="74" x2="94" y2="74" stroke="rgba(212,160,23,.15)" stroke-width=".8"/>
-              <rect x="26" y="78" width="66" height="4" rx="1" fill="rgba(255,255,255,.06)"/>
-
-              <rect x="160" y="12" width="86" height="72" rx="3" fill="rgba(255,255,255,.09)" stroke="rgba(212,160,23,.32)" stroke-width="1.3"/>
-              <rect x="168" y="20" width="70" height="56" rx="2" fill="rgba(212,160,23,.07)"/>
-              <ellipse cx="203" cy="45" rx="25" ry="20" fill="rgba(212,160,23,.1)"/>
-
-              <rect x="14" y="108" width="96" height="74" rx="3" fill="rgba(255,255,255,.09)" stroke="rgba(212,160,23,.35)" stroke-width="1.3"/>
-              <rect x="22" y="116" width="80" height="58" rx="2" fill="rgba(212,160,23,.07)"/>
-              <rect x="30" y="124" width="65" height="42" rx="1" fill="rgba(212,160,23,.06)"/>
-
-              <rect x="152" y="100" width="90" height="80" rx="3" fill="rgba(255,255,255,.09)" stroke="rgba(212,160,23,.4)" stroke-width="1.3"/>
-              <ellipse cx="197" cy="138" rx="28" ry="24" fill="rgba(212,160,23,.1)"/>
-
-              <!-- Magnifier -->
-              <circle cx="120" cy="98" r="26" fill="rgba(212,160,23,.07)" stroke="rgba(212,160,23,.35)" stroke-width="1.8"/>
-              <line x1="139" y1="117" x2="154" y2="133" stroke="rgba(212,160,23,.55)" stroke-width="3" stroke-linecap="round"/>
-              <circle cx="116" cy="92" r="5" fill="rgba(212,160,23,.4)"/>
-
-              <!-- Gold sparks -->
-              <circle cx="135" cy="55" r="2.5" fill="rgba(212,160,23,.45)"/>
-              <circle cx="142" cy="70" r="1.8" fill="rgba(212,160,23,.3)"/>
-              <circle cx="128" cy="78" r="1.5" fill="rgba(212,160,23,.35)"/>
-            </svg>
-          </div>
-          <div class="coll-overlay" aria-hidden="true"></div>
-          <span class="coll-badge">Fototeca</span>
-        </div>
-        <div class="coll-body">
-          <div class="coll-ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-          <h3>Fototeca Histórica</h3>
-          <p>Más de ocho mil fotografías documentan la vida cotidiana, eventos históricos, retratos de personalidades y paisajes del Estado Zulia durante los siglos XIX y XX, incluyendo la época de bonanza petrolera.</p>
-          <a href="#ubicacion" class="coll-link" aria-label="Consultar Fototeca Histórica">
-            Consultar colección
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Card 3 -->
-      <article class="coll-card reveal d2" aria-label="Documentos Coloniales">
-        <div class="coll-thumb">
-          <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#2c1808 0%,#4e2e12 100%);">
-            <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
-              <defs><linearGradient id="dg1" x1="0" y1="0" x2="260" y2="195" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#2c1808"/><stop offset="100%" stop-color="#402010"/></linearGradient></defs>
-              <rect width="260" height="195" fill="url(#dg1)"/>
-              <!-- Parchment documents stacked -->
-              <rect x="55" y="12" width="145" height="170" rx="5" fill="rgba(230,190,120,.09)" stroke="rgba(212,160,23,.22)" stroke-width="1" transform="rotate(-4 130 97)"/>
-              <rect x="55" y="12" width="145" height="170" rx="5" fill="rgba(230,190,120,.11)" stroke="rgba(212,160,23,.28)" stroke-width="1" transform="rotate(-1.5 130 97)"/>
-              <rect x="55" y="14" width="145" height="168" rx="5" fill="rgba(230,190,120,.13)" stroke="rgba(212,160,23,.36)" stroke-width="1.3"/>
-              <!-- Title block -->
-              <rect x="68" y="28" width="124" height="12" rx="2" fill="rgba(212,160,23,.22)"/>
-              <!-- Text lines -->
-              <line x1="68" y1="52" x2="192" y2="52" stroke="rgba(212,160,23,.18)" stroke-width="1"/>
-              <line x1="68" y1="65" x2="185" y2="65" stroke="rgba(212,160,23,.15)" stroke-width="1"/>
-              <line x1="68" y1="78" x2="190" y2="78" stroke="rgba(212,160,23,.18)" stroke-width="1"/>
-              <line x1="68" y1="91" x2="180" y2="91" stroke="rgba(212,160,23,.14)" stroke-width="1"/>
-              <line x1="68" y1="104" x2="188" y2="104" stroke="rgba(212,160,23,.17)" stroke-width="1"/>
-              <line x1="68" y1="117" x2="175" y2="117" stroke="rgba(212,160,23,.14)" stroke-width="1"/>
-              <!-- Wax seal -->
-              <circle cx="130" cy="152" r="20" fill="rgba(160,25,25,.2)" stroke="rgba(212,160,23,.42)" stroke-width="1.5"/>
-              <circle cx="130" cy="152" r="13" fill="rgba(160,25,25,.15)" stroke="rgba(212,160,23,.28)" stroke-width="1"/>
-              <path d="M126 147 L130 142 L134 147 L132 155 L128 155 Z" fill="rgba(212,160,23,.45)"/>
-              <!-- Quill feather -->
-              <path d="M215 10 Q225 30 205 170" stroke="rgba(255,255,255,.28)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-              <path d="M215 10 Q228 22 218 50" stroke="rgba(255,255,255,.2)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-              <!-- Warm glow -->
-              <ellipse cx="130" cy="97" rx="65" ry="50" fill="rgba(212,160,23,.04)"/>
-            </svg>
-          </div>
-          <div class="coll-overlay" aria-hidden="true"></div>
-          <span class="coll-badge">Colonial</span>
-        </div>
-        <div class="coll-body">
-          <div class="coll-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
-          <h3>Documentos Coloniales</h3>
-          <p>Manuscritos, actas, cédulas reales y correspondencia oficial del período colonial venezolano (siglos XVII–XIX). Piezas únicas que narran los procesos administrativos, religiosos y sociales de la época fundacional de Maracaibo.</p>
-          <a href="#ubicacion" class="coll-link" aria-label="Consultar Documentos Coloniales">
-            Consultar colección
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Card 4 -->
-      <article class="coll-card reveal d3" aria-label="Hemeroteca Regional">
-        <div class="coll-thumb">
-          <div class="coll-thumb-inner" style="background:linear-gradient(135deg,#1c2830 0%,#2e3d48 100%);">
-            <svg viewBox="0 0 260 195" fill="none" style="width:100%;height:100%;">
-              <defs><linearGradient id="hg1" x1="0" y1="0" x2="260" y2="195" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1c2830"/><stop offset="100%" stop-color="#2a3840"/></linearGradient></defs>
-              <rect width="260" height="195" fill="url(#hg1)"/>
-              <!-- Stacked newspapers -->
-              <rect x="16" y="48" width="228" height="142" rx="3" fill="rgba(230,210,155,.07)" stroke="rgba(212,160,23,.18)" stroke-width="1" transform="rotate(-4 130 119)"/>
-              <rect x="16" y="44" width="228" height="142" rx="3" fill="rgba(230,210,155,.09)" stroke="rgba(212,160,23,.22)" stroke-width="1" transform="rotate(-1.5 130 115)"/>
-              <rect x="16" y="40" width="228" height="148" rx="3" fill="rgba(230,210,155,.11)" stroke="rgba(212,160,23,.3)" stroke-width="1.3"/>
-              <!-- Masthead -->
-              <rect x="24" y="50" width="212" height="16" rx="2" fill="rgba(212,160,23,.28)"/>
-              <!-- Column dividers -->
-              <line x1="24" y1="74" x2="236" y2="74" stroke="rgba(212,160,23,.3)" stroke-width="1.2"/>
-              <line x1="110" y1="80" x2="110" y2="180" stroke="rgba(212,160,23,.12)" stroke-width=".8"/>
-              <line x1="166" y1="80" x2="166" y2="180" stroke="rgba(212,160,23,.12)" stroke-width=".8"/>
-              <!-- Col 1 text lines -->
-              <line x1="30" y1="86" x2="102" y2="86" stroke="rgba(212,160,23,.2)" stroke-width=".9"/>
-              <line x1="30" y1="96" x2="102" y2="96" stroke="rgba(212,160,23,.17)" stroke-width=".9"/>
-              <line x1="30" y1="106" x2="96" y2="106" stroke="rgba(212,160,23,.18)" stroke-width=".9"/>
-              <line x1="30" y1="116" x2="102" y2="116" stroke="rgba(212,160,23,.16)" stroke-width=".9"/>
-              <rect x="30" y="124" width="68" height="48" rx="2" fill="rgba(212,160,23,.07)"/>
-              <!-- Col 2 text lines -->
-              <line x1="117" y1="86" x2="158" y2="86" stroke="rgba(212,160,23,.17)" stroke-width=".9"/>
-              <line x1="117" y1="98" x2="158" y2="98" stroke="rgba(212,160,23,.15)" stroke-width=".9"/>
-              <line x1="117" y1="110" x2="155" y2="110" stroke="rgba(212,160,23,.17)" stroke-width=".9"/>
-              <line x1="117" y1="122" x2="158" y2="122" stroke="rgba(212,160,23,.15)" stroke-width=".9"/>
-              <line x1="117" y1="134" x2="152" y2="134" stroke="rgba(212,160,23,.14)" stroke-width=".9"/>
-              <!-- Col 3 text lines + photo -->
-              <line x1="173" y1="86" x2="230" y2="86" stroke="rgba(212,160,23,.2)" stroke-width=".9"/>
-              <line x1="173" y1="98" x2="228" y2="98" stroke="rgba(212,160,23,.17)" stroke-width=".9"/>
-              <rect x="173" y="108" width="56" height="62" rx="2" fill="rgba(212,160,23,.08)"/>
-              <!-- Year tag -->
-              <rect x="185" y="16" width="56" height="18" rx="9" fill="rgba(212,160,23,.18)" stroke="rgba(212,160,23,.35)" stroke-width="1"/>
-              <text x="213" y="29" text-anchor="middle" font-size="9" fill="rgba(212,160,23,.85)" font-family="serif" font-style="italic">c. 1908</text>
-              <!-- Light sweep -->
-              <path d="M0 0 L55 195 L0 195 Z" fill="rgba(212,160,23,.025)"/>
-            </svg>
-          </div>
-          <div class="coll-overlay" aria-hidden="true"></div>
-          <span class="coll-badge">Hemeroteca</span>
-        </div>
-        <div class="coll-body">
-          <div class="coll-ico"><svg viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6z"/></svg></div>
-          <h3>Hemeroteca Regional</h3>
-          <p>Amplia colección de publicaciones periódicas zulianas desde finales del siglo XIX hasta mediados del XX, incluyendo ediciones de <cite>El Fonógrafo</cite>, <cite>Panorama</cite> y otros órganos de prensa que registraron la vida pública regional.</p>
-          <a href="#ubicacion" class="coll-link" aria-label="Consultar Hemeroteca Regional">
-            Consultar colección
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </article>
-
+      <button id="coll-next" class="carousel-arrow next" aria-label="Siguiente colección" title="Siguiente">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
     </div>
+
+    <!-- Carousel Dots / Page Indicators -->
+    <div class="coll-carousel-dots" id="coll-dots" role="tablist" aria-label="Paginación de colecciones"></div>
+  </div>
+</section>
   </div>
 </section>
 
@@ -665,6 +816,14 @@
     </div>
   </div>
 </footer>
+
+<!-- Floating Back to Top Button -->
+<button id="back-to-top" aria-label="Volver arriba al inicio de la página" title="Volver arriba">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+
 <script src="script.js"></script>
 </body>
 </html>

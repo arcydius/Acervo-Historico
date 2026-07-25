@@ -309,7 +309,7 @@ section { padding: 5rem 0; }
 }
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
-  background-image: url('Biblioteca_Pública_del_Estado_Zulia.jpg');
+  background-image: url('images/Biblioteca_Pública_del_Estado_Zulia.jpg');
   background-size: cover; background-position: center 35%;
 }
 .hero-bg::after {
@@ -839,14 +839,45 @@ section { padding: 5rem 0; }
 /* ═══════════════════════════════════════════════════════════
    COLECCIONES
    ═══════════════════════════════════════════════════════════ */
-#colecciones { background: var(--cream); }
-.coll-header { text-align: center; margin-bottom: 3.25rem; }
+#colecciones { background: var(--cream); position: relative; }
+.coll-header { text-align: center; margin-bottom: 3rem; }
 .coll-header .section-sub { margin: 0 auto; }
-.coll-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(256px, 1fr)); gap: 1.625rem; }
+
+/* ═══════════════════════════════════════════════════════════
+   COLLECTIONS CAROUSEL (3 CARDS PER VIEW)
+   ═══════════════════════════════════════════════════════════ */
+.coll-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.coll-carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+  border-radius: var(--r-lg);
+  padding: .5rem 0;
+}
+
+.coll-carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
 
 .coll-card {
-  background: var(--white); border-radius: var(--r-lg); overflow: hidden;
-  border: 1px solid var(--gray-300); box-shadow: var(--shadow-sm);
+  /* Exactly 3 cards per view on desktop: flex width = calc((100% - 3rem) / 3) */
+  flex: 0 0 calc((100% - 3rem) / 3);
+  min-width: 0;
+  background: var(--white); 
+  border-radius: var(--r-lg); 
+  overflow: hidden;
+  border: 1px solid var(--gray-300); 
+  box-shadow: var(--shadow-sm);
   transition: transform var(--ease), box-shadow var(--ease);
 }
 .coll-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
@@ -1205,7 +1236,7 @@ footer { background: var(--black); color: rgba(255,255,255,.68); padding: 3rem 0
   .tl-row.flip .tl-mid   { grid-column: 1; grid-row: 1; justify-content: flex-start; }
   .tl-row.flip .tl-right { grid-column: 2; grid-row: 1; padding-left: 1.125rem; }
   .foot-top { grid-template-columns: 1fr; gap: 2rem; }
-  .coll-grid { grid-template-columns: 1fr; }
+  .coll-card { max-width: 100%; }
 }
 
 @media (max-width: 480px) {
@@ -1268,4 +1299,195 @@ footer { background: var(--black); color: rgba(255,255,255,.68); padding: 3rem 0
   footer { background: #fff !important; color: #000 !important; border-top: 2px solid #000; }
   .foot-col h4 { color: #000 !important; }
   .foot-col ul li a, .foot-copy, .foot-credit { color: #333 !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ACCESSIBILITY & SKIP LINK
+   ═══════════════════════════════════════════════════════════ */
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 1rem;
+  z-index: 9999;
+  background: var(--gold);
+  color: var(--blue-deep);
+  font-weight: 800;
+  font-size: var(--type-sm);
+  padding: .75rem 1.25rem;
+  border-radius: var(--r-sm);
+  box-shadow: var(--shadow-gold);
+  transition: top 0.25s ease;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   COLLECTIONS CAROUSEL ARROWS & DOTS
+   ═══════════════════════════════════════════════════════════ */
+.carousel-arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--blue-deep);
+  border: 1px solid var(--gray-300);
+  box-shadow: 0 6px 20px rgba(11, 31, 58, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  z-index: 10;
+  transition: background var(--ease), color var(--ease), border-color var(--ease), transform var(--ease), opacity var(--ease), box-shadow var(--ease);
+}
+.carousel-arrow:hover:not(:disabled) {
+  background: var(--blue-deep);
+  color: var(--gold);
+  border-color: var(--blue-deep);
+  transform: scale(1.08);
+  box-shadow: 0 10px 28px rgba(11, 31, 58, 0.28);
+}
+.carousel-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.coll-carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .625rem;
+  margin-top: 1.75rem;
+}
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gray-300);
+  border: none;
+  cursor: pointer;
+  transition: background var(--ease), transform var(--ease), width var(--ease);
+}
+.carousel-dot:hover {
+  background: var(--gold-mid);
+}
+.carousel-dot.active {
+  background: var(--gold);
+  width: 28px;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(212, 160, 23, 0.4);
+}
+
+/* Carousel Responsive Rules (3 on Desktop, 2 on Tablet, 1 on Mobile) */
+@media (max-width: 1024px) {
+  .coll-card {
+    flex: 0 0 calc((100% - 1.5rem) / 2);
+  }
+}
+@media (max-width: 640px) {
+  .coll-card {
+    flex: 0 0 100%;
+  }
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FLOATING BACK TO TOP BUTTON
+   ═══════════════════════════════════════════════════════════ */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 990;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--blue-deep);
+  color: var(--gold);
+  border: 1px solid rgba(212, 160, 23, 0.4);
+  box-shadow: 0 8px 24px rgba(11, 31, 58, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+#back-to-top:hover {
+  background: var(--gold);
+  color: var(--blue-deep);
+  box-shadow: 0 10px 28px rgba(212, 160, 23, 0.45);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   IMPECCABLE ADAPTIVE ENGINE (SAFE AREAS, LANDSCAPE, FORCED COLORS)
+   ═══════════════════════════════════════════════════════════ */
+
+/* Notch & Safe Area Insets (iOS/Android notched screens) */
+#navbar {
+  padding-left: max(1.25rem, env(safe-area-inset-left));
+  padding-right: max(1.25rem, env(safe-area-inset-right));
+}
+#mobile-menu {
+  padding-left: max(1.25rem, env(safe-area-inset-left));
+  padding-right: max(1.25rem, env(safe-area-inset-right));
+}
+footer {
+  padding-left: max(1.25rem, env(safe-area-inset-left));
+  padding-right: max(1.25rem, env(safe-area-inset-right));
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+}
+#back-to-top {
+  bottom: max(2rem, env(safe-area-inset-bottom));
+  right: max(2rem, env(safe-area-inset-right));
+}
+
+/* Mobile Landscape & Short Viewports (< 600px height) */
+@media (max-height: 600px) and (orientation: landscape) {
+  #inicio {
+    min-height: auto;
+    padding-top: 5.5rem;
+    padding-bottom: 3rem;
+  }
+  .hero-content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .hero-stats {
+    position: relative;
+    backdrop-filter: none;
+    background: rgba(8, 12, 18, 0.95);
+  }
+  .modal-card {
+    max-height: calc(100vh - 2rem);
+  }
+  .modal-header {
+    padding: 1.25rem;
+  }
+  .modal-body {
+    padding: 1.25rem;
+  }
+}
+
+/* Windows High Contrast / Forced Colors Adaptation */
+@media (forced-colors: active) {
+  .btn-primary, .btn-ghost, .filter-tab, .coll-card, .tl-card, .modal-card, #back-to-top {
+    border: 1px solid ButtonText !important;
+  }
+  .filter-tab.active {
+    background: Highlight !important;
+    color: HighlightText !important;
+  }
 }
