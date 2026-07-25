@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════════════════════
    TOKENS — Paleta Bandera del Estado Zulia
    Azul Lago · Negro Petróleo · Oro Solar · Blanco Relámpago
    ═══════════════════════════════════════════════════════════ */
@@ -1219,17 +1219,114 @@ footer { background: var(--black); color: rgba(255,255,255,.68); padding: 3rem 0
   .foot-top > :first-child { grid-column: 1 / -1; }
 
   #inicio {
-    min-height: auto;
-    padding-top: 5.5rem;
-    padding-bottom: 0;
-    flex-direction: column;
-    justify-content: flex-start;
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 5.5rem !important;
+    padding-bottom: 0 !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
   }
   .hero-stats {
-    position: relative;
-    inset: auto;
-    width: 100%;
-    margin-top: 1.5rem;
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    margin-top: 1.5rem !important;
+  }
+
+  /* Timeline Mobile & Tablet Full-Width Vertical Stack */
+  .timeline {
+    position: relative !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding-left: 2.75rem !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .timeline::before {
+    position: absolute !important;
+    left: 17px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 3px !important;
+    transform: none !important;
+  }
+  .tl-row,
+  .tl-row.flip {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    margin-bottom: 2.25rem !important;
+    clear: both !important;
+    grid-template-columns: none !important;
+    float: none !important;
+  }
+  .tl-row:last-child,
+  .tl-row.flip:last-child {
+    margin-bottom: 0 !important;
+  }
+  .tl-empty {
+    display: none !important;
+  }
+  .tl-mid {
+    position: absolute !important;
+    left: -2.75rem !important;
+    top: 0.2rem !important;
+    width: 36px !important;
+    height: 36px !important;
+    margin-left: 0 !important;
+    z-index: 5 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .tl-node {
+    width: 36px !important;
+    height: 36px !important;
+    margin: 0 !important;
+  }
+  .tl-node svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .tl-left,
+  .tl-right {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: left !important;
+    float: none !important;
+    clear: both !important;
+    box-sizing: border-box !important;
+  }
+  .tl-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 1.25rem 1.25rem !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+  .tl-year {
+    display: inline-block !important;
+    font-size: 0.75rem !important;
+    padding: 0.25rem 0.75rem !important;
+    margin-bottom: 0.6rem !important;
+    white-space: normal !important;
+  }
+  .tl-title {
+    font-size: 1.1rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0.5rem !important;
+    text-align: left !important;
+    word-break: break-word !important;
+  }
+  .tl-desc {
+    font-size: 0.875rem !important;
+    line-height: 1.6 !important;
+    text-align: left !important;
+    color: rgba(255, 255, 255, 0.85) !important;
   }
 }
 
@@ -1289,87 +1386,6 @@ footer { background: var(--black); color: rgba(255,255,255,.68); padding: 3rem 0
     border-left: none;
     border-top: 1px solid rgba(255,255,255,.07);
     padding-left: 0; padding-top: .875rem;
-  }
-  /* Timeline Mobile Clean Vertical Stack (Absolute Node + Full Width Cards) */
-  .timeline {
-    position: relative !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    padding-left: 2.25rem !important;
-    box-sizing: border-box !important;
-  }
-  .timeline::before {
-    position: absolute !important;
-    left: 14px !important;
-    top: 0 !important;
-    bottom: 0 !important;
-    width: 3px !important;
-    transform: none !important;
-  }
-  .tl-row,
-  .tl-row.flip {
-    display: block !important;
-    position: relative !important;
-    width: 100% !important;
-    margin-bottom: 2rem !important;
-    clear: both !important;
-    grid-template-columns: none !important;
-  }
-  .tl-empty {
-    display: none !important;
-  }
-  .tl-mid {
-    position: absolute !important;
-    left: -2.25rem !important;
-    top: 0 !important;
-    width: 32px !important;
-    height: 32px !important;
-    margin-left: -2px !important;
-    z-index: 5 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-  .tl-node {
-    width: 32px !important;
-    height: 32px !important;
-    margin: 0 !important;
-  }
-  .tl-node svg {
-    width: 15px !important;
-    height: 15px !important;
-  }
-  .tl-left,
-  .tl-right {
-    display: block !important;
-    width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    text-align: left !important;
-    float: none !important;
-    clear: both !important;
-  }
-  .tl-card {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    padding: 1.15rem !important;
-    margin: 0 !important;
-  }
-  .tl-year {
-    display: inline-block !important;
-    font-size: 0.75rem !important;
-    padding: 0.2rem 0.65rem !important;
-    margin-bottom: 0.5rem !important;
-  }
-  .tl-title {
-    font-size: 1.05rem !important;
-    line-height: 1.3 !important;
-    margin-bottom: 0.5rem !important;
-  }
-  .tl-desc {
-    font-size: 0.85rem !important;
-    line-height: 1.5 !important;
   }
   .foot-top { grid-template-columns: 1fr; gap: 2rem; }
   .coll-card { max-width: 100%; }
