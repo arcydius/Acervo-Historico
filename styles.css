@@ -309,16 +309,17 @@ section { padding: 5rem 0; }
 }
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
-  background-image: url('images/Biblioteca_Pública_del_Estado_Zulia.jpg');
+  background-image: url('images/hero_bg.jpg');
   background-size: cover; background-position: center 35%;
+  background-repeat: no-repeat;
 }
 .hero-bg::after {
   content: ''; position: absolute; inset: 0;
   background: linear-gradient(
     125deg,
-    rgba(8,12,18,.92)  0%,
-    rgba(11,31,58,.80) 55%,
-    rgba(8,12,18,.87)  100%
+    rgba(8,12,18,.82)  0%,
+    rgba(11,31,58,.68) 55%,
+    rgba(8,12,18,.78)  100%
   );
 }
 .hero-bg::before {
@@ -1242,6 +1243,12 @@ footer { background: var(--black); color: rgba(255,255,255,.68); padding: 3rem 0
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
+  }
+  .hero-bg {
+    background-image: url('images/hero_bg.jpg') !important;
+    background-position: center 25% !important;
+    background-size: cover !important;
+    background-attachment: scroll !important;
   }
   .hero-content {
     padding: 2rem 1.25rem 2rem !important;
