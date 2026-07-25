@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════════════════════
    TOKENS — Paleta Bandera del Estado Zulia
    Azul Lago · Negro Petróleo · Oro Solar · Blanco Relámpago
    ═══════════════════════════════════════════════════════════ */
@@ -304,7 +304,7 @@ section { padding: 5rem 0; }
    ═══════════════════════════════════════════════════════════ */
 #inicio {
   position: relative; min-height: 100vh;
-  display: flex; align-items: center;
+  display: flex; flex-direction: column; justify-content: space-between;
   overflow: hidden; padding: 0;
 }
 .hero-bg {
@@ -331,11 +331,11 @@ section { padding: 5rem 0; }
 .hero-content {
   position: relative; z-index: 2;
   max-width: 1160px; margin: 0 auto;
-  /* bottom clears the absolute stats bar (~92px) */
-  padding: 8rem 1.25rem 8.5rem;
+  padding: 7.5rem 1.25rem 3rem;
   width: 100%;
-  display: flex; flex-direction: column; align-items: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
   text-align: center;
+  flex: 1 0 auto;
 }
 
 /* Location badge — eyebrow pill */
@@ -445,10 +445,11 @@ section { padding: 5rem 0; }
 
 /* ─── Stats bar ─────────────────────────────────────────── */
 .hero-stats {
-  position: absolute; bottom: 0; left: 0; right: 0; z-index: 2;
-  background: rgba(8,12,18,.82);
+  position: relative; z-index: 2; width: 100%;
+  background: rgba(8,12,18,.88);
   backdrop-filter: blur(12px);
   border-top: 1px solid rgba(212,160,23,.2);
+  flex: 0 0 auto;
 }
 .hero-stats-inner {
   max-width: 1160px; margin: 0 auto; padding: 1.25rem;
@@ -1211,14 +1212,7 @@ footer { background: var(--black); color: rgba(255,255,255,.68); padding: 3rem 0
   .about-visual-main { aspect-ratio: 16/10; }
   .foot-top { grid-template-columns: 1fr 1fr; }
   .foot-top > :first-child { grid-column: 1 / -1; }
-}
 
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-  #hamburger { display: flex; }
-  section { padding: 3.5rem 0; }
-
-  /* Hero Mobile Layout Adaptation (Prevent hero-stats overlapping CTA buttons) */
   #inicio {
     min-height: auto;
     padding-top: 5.5rem;
@@ -1226,11 +1220,36 @@ footer { background: var(--black); color: rgba(255,255,255,.68); padding: 3rem 0
     flex-direction: column;
     justify-content: flex-start;
   }
+  .hero-stats {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  #hamburger { display: flex; }
+  section { padding: 3.5rem 0; }
+
+  /* Hero Mobile & Tablet Layout Adaptation (Zero Overlap Guaranteed) */
+  #inicio {
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 5.25rem !important;
+    padding-bottom: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
   .hero-content {
-    padding: 1.5rem 1.25rem 2rem;
+    padding: 2rem 1.25rem 2rem !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
   }
   .hero-h1 {
-    font-size: clamp(2rem, 8vw, 2.75rem);
+    font-size: clamp(1.85rem, 7.5vw, 2.6rem);
     margin-bottom: 1.25rem;
   }
   .hero-sub {
@@ -1238,15 +1257,27 @@ footer { background: var(--black); color: rgba(255,255,255,.68); padding: 3rem 0
     margin-bottom: 2rem;
   }
   .hero-actions {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-ghost {
+    width: 100%;
+    justify-content: center;
+    padding: .85rem 1.25rem;
   }
   .hero-stats {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    right: auto;
-    width: 100%;
-    margin-top: 1.5rem;
+    position: relative !important;
+    inset: auto !important;
+    bottom: auto !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    margin-top: 1rem !important;
+    z-index: 5 !important;
   }
   .hero-stats-inner { grid-template-columns: 1fr; }
   .stat + .stat {
