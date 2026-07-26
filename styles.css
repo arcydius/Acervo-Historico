@@ -1,4 +1,4 @@
-﻿/* ═══════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════
    TOKENS — Paleta Bandera del Estado Zulia
    Azul Lago · Negro Petróleo · Oro Solar · Blanco Relámpago
    ═══════════════════════════════════════════════════════════ */
@@ -1053,52 +1053,87 @@ section { padding: 5rem 0; }
 .soc-card:hover .soc-arrow { opacity: .88; transform: translateX(3px); }
 .soc-arrow svg { width: 15px; height: 15px; }
 
-/* ─── Map panel ─────────────────────────────────────────── */
+/* ─── Map panel (Photo Showcase with Pin & Google Maps Link) ─── */
 .map-panel {
+  display: block; text-decoration: none; color: inherit;
   background: var(--white); border-radius: var(--r-xl);
   overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--gray-300);
+  transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+  cursor: pointer;
+}
+.map-panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 52px rgba(11,31,58,.26);
+  border-color: var(--gold);
 }
 .map-vis {
-  aspect-ratio: 4/3; position: relative;
-  background: linear-gradient(145deg, #C8DDF8 0%, #D8EAF8 60%, #B8CCEE 100%);
+  aspect-ratio: 4/3; position: relative; width: 100%;
   display: flex; flex-direction: column;
   align-items: center; justify-content: center; gap: 1.25rem;
+  overflow: hidden;
+  background: #0B1F3A;
 }
-.map-vis::before {
-  content: ''; position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(27,58,107,.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(27,58,107,.055) 1px, transparent 1px);
-  background-size: 30px 30px;
+.map-bg-img {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  transition: transform var(--ease-slow), filter var(--ease);
 }
-.map-vis::after {
-  content: ''; position: absolute; inset: 0;
-  background:
-    linear-gradient(rgba(255,255,255,.5) 0px, rgba(255,255,255,.5) 3px, transparent 3px) center / 100% 90px repeat,
-    linear-gradient(90deg, rgba(255,255,255,.5) 0px, rgba(255,255,255,.5) 3px, transparent 3px) center / 90px 100% repeat;
+.map-panel:hover .map-bg-img {
+  transform: scale(1.06);
 }
-.map-pin-wrap { position: relative; z-index: 1; }
+.map-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(11,31,58,.42) 0%,
+    rgba(11,31,58,.68) 60%,
+    rgba(8,12,18,.85) 100%
+  );
+  transition: background var(--ease);
+}
+.map-panel:hover .map-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(11,31,58,.3) 0%,
+    rgba(11,31,58,.55) 60%,
+    rgba(8,12,18,.78) 100%
+  );
+}
+
+.map-pin-wrap { position: relative; z-index: 2; }
 .map-pin-body {
-  width: 54px; height: 54px;
-  background: var(--blue-mid);
+  width: 56px; height: 56px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-mid));
   border-radius: 50% 50% 50% 0; transform: rotate(-45deg);
   display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 8px 24px rgba(27,58,107,.4);
+  box-shadow: 0 8px 28px rgba(212,160,23,.5), 0 2px 8px rgba(0,0,0,0.4);
+  transition: transform var(--ease), background var(--ease);
+}
+.map-panel:hover .map-pin-body {
+  transform: rotate(-45deg) scale(1.12);
 }
 .map-pin-body svg {
   transform: rotate(45deg); width: 26px; height: 26px;
-  stroke: white; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round;
+  stroke: var(--blue-deep); fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;
 }
 .map-pulse {
   position: absolute; inset: 0;
-  border-radius: 50% 50% 50% 0; border: 2px solid var(--blue-mid);
+  border-radius: 50% 50% 50% 0; border: 2px dashed var(--gold-soft);
   animation: mapPulse 2.2s infinite;
 }
+
 .map-chip {
-  position: relative; z-index: 1;
-  background: var(--white);
+  position: relative; z-index: 2;
+  background: rgba(255,255,255,.95);
+  backdrop-filter: blur(8px);
   border-radius: var(--r-md); padding: .875rem 1.25rem;
-  box-shadow: var(--shadow-md); text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3); text-align: center;
+  border: 1px solid rgba(255,255,255,.4);
+  transition: transform var(--ease), background var(--ease);
+}
+.map-panel:hover .map-chip {
+  background: var(--white);
+  transform: translateY(-2px);
 }
 .map-chip strong {
   display: block;
@@ -1109,17 +1144,35 @@ section { padding: 5rem 0; }
 }
 .map-chip span {
   font-size: var(--type-xs);
-  color: var(--gray-500);
+  color: var(--gray-700);
+  font-weight: 600;
   letter-spacing: .01em;
 }
+
 .map-foot {
-  padding: 1rem 1.5rem;
+  padding: .875rem 1.5rem;
   background: var(--blue-pale);
-  text-align: center;
+  display: flex; align-items: center; justify-content: center; gap: .75rem;
   font-size: var(--type-sm);
   color: var(--blue-mid);
   font-weight: 500;
   letter-spacing: .01em;
+}
+.map-foot-btn {
+  display: inline-flex; align-items: center; gap: .35rem;
+  font-size: var(--type-xs);
+  font-weight: 800;
+  color: var(--blue-deep);
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  padding: .45rem .875rem;
+  border-radius: var(--r-sm);
+  box-shadow: 0 2px 8px rgba(212,160,23,.3);
+  transition: transform var(--ease), box-shadow var(--ease), filter var(--ease);
+}
+.map-panel:hover .map-foot-btn {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+  box-shadow: 0 4px 14px rgba(212,160,23,.45);
 }
 
 /* ═══════════════════════════════════════════════════════════
